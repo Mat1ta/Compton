@@ -7,4 +7,8 @@ Abbimao imparato alcuni comandi di markdown: _italic_, **bold**, headlines (#/##
 | Contenuto della cella | Più cose        | E ancora |
 | Puoi anche            | Metti i tubi in | Mi piace questo |
 
+E immagini!!
+
+![Duck](http://i.stack.imgur.com/ukC2U.jpg)
+
 Abbiamo letto la scheda di laboratorio
