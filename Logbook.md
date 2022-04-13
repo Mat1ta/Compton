@@ -35,6 +35,5 @@ L'attenuatore serve perchè il segnale satura nel TENNELEC per tensioni superior
 ### lista di domande
 * le ripartenze sono un problema?
 * 
-
-
+## 13 aprile 2022
 
