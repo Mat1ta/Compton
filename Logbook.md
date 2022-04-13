@@ -29,11 +29,35 @@ Prendiamo il segnale PMT1a, lo inviamo all'attenuatore passivo con una attenuazi
 L'attenuatore serve perchè il segnale satura nel TENNELEC per tensioni superiori a 4.84 V (cursori)
 
 | V<sub>mon1</sub> [V] | V<sub>THR</sub> [mV] | D [cm] | name_file.dat |
-| ------------------- | ------------------- | ------ | ------------- |
-| 670                 | -68.3               |        |               |
+| -------------------- | -------------------- | ------ | ------------- |
+| 670                  | -68.3                |        |               |
 
 ### lista di domande
 * le ripartenze sono un problema?
-* 
+
+
 ## 13 aprile 2022
+Il rate che osservavamo era basso perché la soglia era troppo alta, per alimentazioni più basse serve una soglia più bassa, e.g. V<sub>mon</sub>=757 V  e V<sub>TR</sub>=-20.0 mV, rate ad angolo zero è 9 KHz, ad angolo 30 è 200 Hz, attenuazione 23dB.
+
+D è la distanza tra l'inizio della guida e l'inizio del carrello. 
+La distanza tra:
+* l'inizio del carrello e l'inizio del cristallo è 7.3(2) cm,
+* l'inizio del carrello e la vite è 22.8(2) cm, 
+* la vite e il foro è 4.7(2) cm
+
+Disegnamo sul carrello delle tacchette distanti 1 cm a partire dal bordo più vicino al foro (si fanno 21 segni con un pennarello STAEDTLER permanent Lumacolor F).
+
+Note sulla ultima parte in compagnia del professore Dell'Orso:
+1. fissiamo D= 0 cm e per vari valori di V<sub>mon</sub> andiamo a regolare l'attenuazione per ottenere la massima risoluzione evitando che il TENNELEC saturi in corrispondenza dei picchi dei fotoni. Scriviamo i punti di lavoro buoni.
+    | V<sub>mon</sub> [V] | coarse gain | fine gain | attenuazione [dB] |
+    | ------------------- | ----------- | --------- | ----------------- |
+    | 634                 | 10          | 0.85      | --                |
+    | 648                 | 10          | 0.942     | 2                 |    
+    | 688                 | 10          | 0.738     | 6.5               |
+
+
+2. La configurazione a riga 2 è accettabile.
+3. Le terminazioni a 50$\Omega$ ammazzavano il segnale. Il percorso seguito dal segnale per i dati in tabella è:
+PMT1amp $\rightarrow$ Attenuatore $\rightarrow$ TENNELEC $\rightarrow$ CAEN N957.
+
 
