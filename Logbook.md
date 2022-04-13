@@ -37,7 +37,7 @@ L'attenuatore serve perchè il segnale satura nel TENNELEC per tensioni superior
 
 
 ## 13 aprile 2022
-Il rate che osservavamo era basso perché la soglia era troppo alta, per alimentazioni più basse serve una soglia più bassa, e.g. V<sub>mon</sub>=757 V  e V<sub>TR</sub>=-20.0 mV, rate ad angolo zero è 9 KHz, ad angolo 30 è 200 Hz, attenuazione 23dB.
+Il rate che osservavamo era basso perché la soglia di trigger era troppo alta, per alimentazioni più basse serve una soglia più bassa, e.g. V<sub>mon</sub> = 757 V  e V<sub>TR</sub> = -20.0 mV, rate ad angolo zero è 9 KHz, ad angolo 30 è 200 Hz, attenuazione 23dB.
 
 D è la distanza tra l'inizio della guida e l'inizio del carrello. 
 La distanza tra:
