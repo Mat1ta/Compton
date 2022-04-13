@@ -16,21 +16,21 @@ Iniziamo a familiarizzare con la strumentazione:
 
 Impostiamo delle tensioni di alimentazioni consigliate e scegliamo le tensioni di soglia in modo che segnali aventi forme d'onda diverse da quella aspettata siano disciminati.
 
-|$$V_{mon1}$$ |$$V_{mon2}$$| V_{THR1}|
-|-------------|------------|---------|
-|670 V        |1510 V      |-207.8mV |
+| V<sub>mon1<sub> | V<sub>mon2<sub> | V<sub>THR1<sub> |
+| --------------- | --------------- | --------------- |
+| 670 V           | 1510 V          | -207.8 mV       |
 
-Controlliamo il funzionamento del PMT1 con punto di lavoro fissato come sopra e $\theta$=0.
-A V_{THR1}= 207.8 mV vediamo un rate di 0.7 Hz (anche cambiando l'angolo), quando ce ne aspettiamo uno di 74 MBq
-A V_{THR1}= 68.3 mV il rate è di 16 Hz (3Hz per un angolo di 45 degree)
+Controlliamo il funzionamento del PMT1 con punto di lavoro fissato come sopra e $\theta=0$.
+A V<sub>THR1</sub> = 207.8 mV vediamo un rate di 0.7 Hz (anche cambiando l'angolo), quando ce ne aspettiamo uno di 74 MBq
+A V<sub>THR1</sub>= 68.3 mV il rate è di 16 Hz (3Hz per un angolo di 45$^\circ$).
 
 Andiamo a vedere che energie legge il PMT1a in diverse configurazioni: cambiando la tensione di alimentazione(, la tensione di soglia?), la distanza dalla sorgente.
 Prendiamo il segnale PMT1a, lo inviamo all'attenuatore passivo con una attenuazione di 20 dB, il segnale attenuato passa dal TENNELEC che aggiusta la forma d'onda in modo tale che sia compatibile con il modulo ADC CAEN, che misura l'energia dell'evento.
 L'attenuatore serve perchè il segnale satura nel TENNELEC per tensioni superiori a 4.84 V (cursori)
 
-|V_mon1 [V] |V_THR [mV] |D [cm] |name_file.dat  |
-|-----------|-----------|-------|---------------|
-|670        |-68.3      |       |               |
+| V<sub>mon1</sub> [V] | V<sub>THR</sub> [mV] | D [cm] | name_file.dat |
+| ------------------- | ------------------- | ------ | ------------- |
+| 670                 | -68.3               |        |               |
 
 ### lista di domande
 * le ripartenze sono un problema?
