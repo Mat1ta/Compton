@@ -47,7 +47,7 @@ La distanza tra:
  
 ![alt text](http://url/to/apparato.png)
     
-![apparato]{https://github.com/Mat1ta/Compton/blob/main/apparato.jpg?}
+![apparato]{https://github.com/Mat1ta/Compton/blob/main/apparato.jpg}
     
 Disegnamo sul carrello delle tacchette distanti 1 cm a partire dal bordo più vicino al foro (si fanno 21 segni con un pennarello STAEDTLER permanent Lumacolor F).
 
