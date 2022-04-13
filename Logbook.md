@@ -45,7 +45,7 @@ La distanza tra:
 * l'inizio del carrello e la vite è 22.8(2) cm, 
 * la vite e il foro è 4.7(2) cm
 
- ![apparato]{https://github.com/Mat1ta/Compton/blob/0ac586cf8d2f194be7bcc3b7c58b521b58b0c038/apparato.jpg}
+ ![apparato]{https://github.com/Mat1ta/Compton/blob/main/apparato.jpg}
     
 Disegnamo sul carrello delle tacchette distanti 1 cm a partire dal bordo più vicino al foro (si fanno 21 segni con un pennarello STAEDTLER permanent Lumacolor F).
 
