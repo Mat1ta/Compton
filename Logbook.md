@@ -94,3 +94,27 @@ PMT1amp $\rightarrow$ Attenuatore $\rightarrow$ TENNELEC $\rightarrow$ CAEN N957
  * Misuriamo le dimensioni del fascio di fotoni diffusi -> per fare questo non serve prima aggiustare il trigger??)
  * coincidenza PMT1b e PMT2
  * soglia del gate (per fotoni incidenti o fotoni diffusi?)
+ 
+ 
+ ## 27 aprile
+ 
+ Collego l'uscita del PMT1b all'oscilloscopio con un cavo da 4 ns senza terminazione, si osservano delle riflessioni di 97(1)ns.
+ Faccio la stessa cosa con il PMT2 (stesso cavo) e osservo delle riflessioni di 62.00(40) ns. Si osserva che per questo canale ci sono le stesse riflessioni anche con la terminazione a 50 ohm anche se più attenuate.
+ 
+ Da queste misure si può ricavare che la lunghezza del filo che va dal PMT1 all'uscita PMT1b sul track è di 44.5 ns, e quella che va dal PMT2 alla sua uscita sul track è di 27 ns.
+ Allora la differenza di tempo di due segnali simultanei sui due PMT è di 17.5 ns.
+
+ I due segnali non sono simultanei (anche se si potrebbe fare una stima teorica di questa differenza) e soprattutto non conosciamo i tempi di risposta dei due PMT, allora ha più senso guardare i due segnali in persistenza all'osscilloscopio e stimare così il ritardo tra le due risposte (comprese di cavi, momento in cui passa la particella dal rivelatore e risposta dello stesso).
+ 
+ Ci sono pochi segnali, percio' si abbassano le soglie del discriminatore al minimo, -35.2 per PMT1b e -36.6 mV per PMT2.
+ Abbiamo guardato se si vedevano più coincidenze con una tensine di alimentazione del PMT1 più alta ma poi l'abbiamo reimpostata a 690 V.
+ 
+ Cerchiamo di eliminare le ripartenze del PMT1b, inviamo il segnale del PMT al discriminatore con soglia -35.2 mV, e inviamo il segnale a un dual timer che lo allarga fino a circa 800 ns, e poi lo riduce a 200 ns.
+ Il seganle del PMT2 invece è mandato al discriminatore con soglia -36.6 mV, e poi è ritardato di 108 ns e allargato a 324 ns con un modulo quad gate delay.
+
+ Aumentiamo l'alimentazione del PMT2 a 1891 V.
+ 
+ Facciamo la coincidenza tra i due seganli modificati come sopra, ed essa viene allargata a 1 us con il modulo quad gate
+ Iniziamo a salvare un file di eventi triggerati sulla coincidenza tra così fatta.
+
+ 
