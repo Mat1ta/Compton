@@ -115,6 +115,18 @@ PMT1amp $\rightarrow$ Attenuatore $\rightarrow$ TENNELEC $\rightarrow$ CAEN N957
  Aumentiamo l'alimentazione del PMT2 a 1891 V.
  
  Facciamo la coincidenza tra i due seganli modificati come sopra, ed essa viene allargata a 1 us con il modulo quad gate
- Iniziamo a salvare un file di eventi triggerati sulla coincidenza tra così fatta.
+ Iniziamo a salvare un file di eventi triggerati sulla coincidenza tra così fatta. Il nome del file è plot0427.log, l'angolo del cristallo è 34 gradi.
+ 
+ ## 28 aprile
+ 
+ Avvimao il progrmma per fare una presa dati con le stesse condizini di ieri: plot0428_1890.dat
+ 
+ Abbassiamo la tensione di alimentazione del PMT2 a 1790 V (dato che la tensione massima è 1800 V).
+ Amplifichiamo di un fattore 10 il segnale del PMT2 prima di mandarlo al discriminatore, la cui sogli aviene alzata a -150 mV (così che la soglia di discriminazione sul segnale non ambplificato sia di -15 mV).
+ Le larghezze dei due segnali in coincidenza sono di 1 us.
+ 
+ Iniziamo una run con queste condizioni (avendo controllato che la coincidenza fosse ancora corretta): plot0428th30.log
+ Ne facciamo un'altra con il cristallo ad angolo 15 gradi: plot0428th15.log
+ 
 
  
