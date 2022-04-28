@@ -128,5 +128,8 @@ PMT1amp $\rightarrow$ Attenuatore $\rightarrow$ TENNELEC $\rightarrow$ CAEN N957
  Iniziamo una run con queste condizioni (avendo controllato che la coincidenza fosse ancora corretta): plot0428th30.log
  Ne facciamo un'altra con il cristallo ad angolo 15 gradi: plot0428th15.log
  
+ Amplifichiamo anche il PMT1b, con lo scopo di abbassare la sua tensione di soglia così da poter vedere uno spettro più ampio in energia.
+ Questa run è salvata nel file plot0428th15bis.log
+ 
 
  
