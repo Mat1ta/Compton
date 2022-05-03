@@ -127,7 +127,7 @@ PMT1amp $\rightarrow$ Attenuatore $\rightarrow$ TENNELEC $\rightarrow$ CAEN N957
  
  Iniziamo una run con queste condizioni (avendo controllato che la coincidenza fosse ancora corretta): plot0428th30.log.
  
- <img src="plots/plot0428th30.pdf"/>
+<image src="plots/plot0428th30.pdf"/>
  
  Ne facciamo un'altra con il cristallo ad angolo 15 gradi: plot0428th15.log
  
@@ -138,5 +138,23 @@ PMT1amp $\rightarrow$ Attenuatore $\rightarrow$ TENNELEC $\rightarrow$ CAEN N957
  
  <img src="plots/plot0428th15bis.pdf"/>
  
-
+## 3 maggio
+ 
+ * calibrazione per fare osservazioni quantitative su dove mi aspetto di trovare i picchi
+ * conoscere la risoluzione dell'apparato (con sorgenti diverse, come quelle con un solo picco)
+ * presa dati di un paio d'ore per fare delle considerazioni quantitative e sull'importanza del rumore
+ * misura del rumore (?)
+ 
+ Usando l'equazione dell'effetto compton ci si aspetta le seguenti energie per i fotoni scatterati ad angolo theta:
+ |   theta   |   0   |  15  |  30  |
+ |-----------|-------|------|------|
+ | E_1 [MeV] | 1.17  | 1.08 | 0.89 |
+ | E_1 [MeV] | 1.33  | 1.22 | 0.99 |
+ 
+ Facciamo una prima calibrazione usando la sorgente di cobaldo diretta sul cristallo (theta=0), ci aspettiamo due picchi: uno a 1 MeV e uno a 1.2 MeV. Vediamo che il grafico satura sul secondo picco: decidiamo di cambiare il fine gain (del PMT1) a 0.700 (V<sub>mon</sub> = 690 V).
+ I dati di questo istogramma sono salvati sul file plot0503cal60Co.dat (trigger automatico).
+ Il primo picco è 6457(192), il secondo è 7281(188).
+ 
+ Facciamo una presa dati a 15 gradi col setup così fatto (gate quello della volta scorsa, con i segnali dei due PMT in coincidenza sono entrambi amplificati e il fine gain del cristalllo modificato come sopra): plot0503th15_0.dat  e plot0503th15_1.dat (quest'ultimo comprende i dati del primo: è stata messa in "pausa" l'acquisizione).
+ 
  
