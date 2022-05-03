@@ -119,17 +119,24 @@ PMT1amp $\rightarrow$ Attenuatore $\rightarrow$ TENNELEC $\rightarrow$ CAEN N957
  
  ## 28 aprile
  
- Avvimao il progrmma per fare una presa dati con le stesse condizini di ieri: plot0428_1890.dat
+ Avviamo il progrmma per fare una presa dati con le stesse condizini di ieri: plot0428_1890.dat
  
  Abbassiamo la tensione di alimentazione del PMT2 a 1790 V (dato che la tensione massima è 1800 V).
  Amplifichiamo di un fattore 10 il segnale del PMT2 prima di mandarlo al discriminatore, la cui sogli aviene alzata a -150 mV (così che la soglia di discriminazione sul segnale non ambplificato sia di -15 mV).
  Le larghezze dei due segnali in coincidenza sono di 1 us.
  
- Iniziamo una run con queste condizioni (avendo controllato che la coincidenza fosse ancora corretta): plot0428th30.log
+ Iniziamo una run con queste condizioni (avendo controllato che la coincidenza fosse ancora corretta): plot0428th30.log.
+ 
+ <img src="plots/plot0428th30.pdf"/>
+ 
  Ne facciamo un'altra con il cristallo ad angolo 15 gradi: plot0428th15.log
+ 
+ <img src="plots/plot0428th15.pdf"/>
  
  Amplifichiamo anche il PMT1b, con lo scopo di abbassare la sua tensione di soglia così da poter vedere uno spettro più ampio in energia.
  Questa run è salvata nel file plot0428th15bis.log
+ 
+ <img src="plots/plot0428th15bis.pdf"/>
  
 
  
