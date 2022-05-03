@@ -127,7 +127,7 @@ PMT1amp $\rightarrow$ Attenuatore $\rightarrow$ TENNELEC $\rightarrow$ CAEN N957
  
  Iniziamo una run con queste condizioni (avendo controllato che la coincidenza fosse ancora corretta): plot0428th30.log.
  
- <img src="plots/plot0428th30.pdf"/>
+<image src="plots/plot0428th30.pdf"/>
  
  Ne facciamo un'altra con il cristallo ad angolo 15 gradi: plot0428th15.log
  
