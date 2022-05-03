@@ -1,7 +1,7 @@
 //
 // Simple plot of log file, run with the following command:
 //      root 'hexahist.cpp(fname)'
-// For example: root 'hexahist.cpp("plot0427.log")'
+// For example: root 'hexahist.cpp("plot0427.dat")'
 
 #include <iostream>
 #include <fstream>
