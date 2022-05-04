@@ -173,7 +173,7 @@ PMT1amp $\rightarrow$ Attenuatore $\rightarrow$ TENNELEC $\rightarrow$ CAEN N957
  
  Si osserva che se la scatola con le sorgenti non viene schermata dal Pb, il picco del Cesio si vede sempre, in quanto la scatola non è sufficiente a schermarne i fotoni.
  
- Iniziamo una presa dati a 15 gradi: plot0504th15.dat . 
+ Iniziamo una presa dati a 15 gradi: plot0504th15.dat (1h55). 
  Nel frattenpo si fa un'analisi approssimativa () dei dati di calibrazione:
  * sodio due picchi : 6381(187) e 2637(96) (Na)
  * cesio un picco in due grafici : 3414(107) (Cs), 3394(119) (Na)
