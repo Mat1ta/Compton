@@ -42,7 +42,7 @@ Il rate che osservavamo era basso perché la soglia di trigger era troppo alta, 
 D è la distanza tra l'inizio della guida e l'inizio del carrello. 
 La distanza tra:
 * l'inizio del carrello e l'inizio del cristallo è 7.3(2) cm,
-* l'inizio del carrello e la vite è 22.8(2) cm, 
+* l'inizio della guida e la vite è 22.8(2) cm, 
 * la vite e il foro è 4.7(2) cm
 
  <img src="apparato.jpg"/>
@@ -139,7 +139,7 @@ PMT1amp $\rightarrow$ Attenuatore $\rightarrow$ TENNELEC $\rightarrow$ CAEN N957
  <img src="plots/plot0428th15bis.pdf"/>
  
 ## 3 maggio
- 
+ Briefing:
  * calibrazione per fare osservazioni quantitative su dove mi aspetto di trovare i picchi
  * conoscere la risoluzione dell'apparato (con sorgenti diverse, come quelle con un solo picco)
  * presa dati di un paio d'ore per fare delle considerazioni quantitative e sull'importanza del rumore
@@ -156,5 +156,27 @@ PMT1amp $\rightarrow$ Attenuatore $\rightarrow$ TENNELEC $\rightarrow$ CAEN N957
  Il primo picco è 6457(192), il secondo è 7281(188).
  
  Facciamo una presa dati a 15 gradi col setup così fatto (gate quello della volta scorsa, con i segnali dei due PMT in coincidenza sono entrambi amplificati e il fine gain del cristalllo modificato come sopra): plot0503th15_0.dat  e plot0503th15_1.dat (quest'ultimo comprende i dati del primo: è stata messa in "pausa" l'acquisizione).
+ 
+## 4 maggio
+ Misuro il diametro del cristallo col calibro: 5.860(5) cm.
+ Questo mi serve per determinare l'apertura angolare rispetto alla distanza del cristallo dal foro della sorgente.
+ Il PMT2 è largo 1.180(5) cm.
+ 
+ Da oggi in poi iniziamo una procedura di controllo dei punti lavoro e della calibrazione:
+ * punti di lavoro
+    | V<sub>mon1</sub> [V] | coarse gain PMT1a | fine gain PMT1a | attenuazione [dB] PMT1a | V<sub>mon2</sub> [V] | V_th1b | V_th2 |
+    | -------------------- | ----------------- | --------------- | ----------------------- | ---------------------|--------|------|
+    | 690                   | 10                | 0.700            | 5.5                    |     1788             |-259.5 mV|   -151.8 mV|
+ * calibrazione
+   * sodio: plot0504calNa.dat, plot0504calNa_1.dat
+   * cesio: plot0504calCs.dat
+ 
+ Si osserva che se la scatola con le sorgenti non viene schermata dal Pb, il picco del Cesio si vede sempre, in quanto la scatola non è sufficiente a schermarne i fotoni.
+ 
+ Iniziamo una presa dati a 15 gradi: plot0504th15.dat . 
+ Nel frattenpo si fa un'analisi approssimativa () dei dati di calibrazione:
+ * sodio due picchi : 6381(187) e 2637(96) (Na)
+ * cesio un picco in due grafici : 3414(107) (Cs), 3394(119) (Na)
+ * picco osservato nello spettro del cesio in 1014(150) (Cs) --> chi è??
  
  
