@@ -187,3 +187,13 @@ PMT1amp $\rightarrow$ Attenuatore $\rightarrow$ TENNELEC $\rightarrow$ CAEN N957
     | V<sub>mon1</sub> [V] | coarse gain PMT1a | fine gain PMT1a | attenuazione [dB] PMT1a | V<sub>mon2</sub> [V] | V_th1b    | V_th2     |
     | -------------------- | ----------------- | --------------- | ----------------------- | -------------------- | --------- | --------- |
     | 693                  | 10                | 0.700           | 5.5                     | 1790                 | -258.0 mV | -151.0 mV |
+ 
+ 
+ Abbiamo stretto i segnali che erano in coincidenza a 300 ns.
+ Facciamo così un'acquisizione a 15 gradi: plot0505th15d01.dat (0h17).
+ 
+ Allontanizmo il carrello di 12 cm (prima era a un centrimetro dall'iniziono della guida) e facciamo un'altra acquisizione: plot0505the15d13.dat (0h17).
+ 
+ Stringiamo ancora i segnali in coincidenza entrambi a 152 ns, e faccimao partire l'acquisizione: plot0505th15d01_1.dat (0h17).
+ 
+ Facciamo due misure di calibrazione col sodio (plot0505calNa.dat) e col Cesio (plot0505calCs.dat).
