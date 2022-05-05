@@ -55,7 +55,7 @@ Note sulla ultima parte in compagnia del professore Dell'Orso:
     | V<sub>mon</sub> [V] | coarse gain | fine gain | attenuazione [dB] |
     | ------------------- | ----------- | --------- | ----------------- |
     | 634                 | 10          | 0.85      | --                |
-    | 648                 | 10          | 0.942     | 2                 |    
+    | 648                 | 10          | 0.942     | 2                 |
     | 688                 | 10          | 0.738     | 6.5               |
 
 2. La configurazione a riga 2 è accettabile.
@@ -71,13 +71,13 @@ PMT1amp $\rightarrow$ Attenuatore $\rightarrow$ TENNELEC $\rightarrow$ CAEN N957
  
  Faccimao un campionamento a diversi angoli dei fotoni incidenti:
  soglia di trigger dell'oscilloscopio -8.0 mV
- |angolo [deg]|  rate [Hz] |
- |------------|------------|
- |  0         |  7.5(5) k  |
- |  6         |  3.3(3)k   |
- |  12        |  440(100)  |
- |  30        |  280(40)   |
- |  60        |  200(40)   |
+ | angolo [deg] | rate [Hz] |
+ | ------------ | --------- |
+ | 0            | 7.5(5) k  |
+ | 6            | 3.3(3)k   |
+ | 12           | 440(100)  |
+ | 30           | 280(40)   |
+ | 60           | 200(40)   |
  
  Fissiamo V<sub>mon</sub> del PMT2 a 1570 V (il rate misurato all'oscilloscopio a questa tensione è 180(40)Hz con una soglia di -11 mV)
  
@@ -146,10 +146,10 @@ PMT1amp $\rightarrow$ Attenuatore $\rightarrow$ TENNELEC $\rightarrow$ CAEN N957
  * misura del rumore (?)
  
  Usando l'equazione dell'effetto compton ci si aspetta le seguenti energie per i fotoni scatterati ad angolo theta:
- |   theta   |   0   |  15  |  30  |
- |-----------|-------|------|------|
- | E_1 [MeV] | 1.17  | 1.08 | 0.89 |
- | E_1 [MeV] | 1.33  | 1.22 | 0.99 |
+ | theta     | 0    | 15   | 30   |
+ | --------- | ---- | ---- | ---- |
+ | E_1 [MeV] | 1.17 | 1.08 | 0.89 |
+ | E_1 [MeV] | 1.33 | 1.22 | 0.99 |
  
  Facciamo una prima calibrazione usando la sorgente di cobaldo diretta sul cristallo (theta=0), ci aspettiamo due picchi: uno a 1 MeV e uno a 1.2 MeV. Vediamo che il grafico satura sul secondo picco: decidiamo di cambiare il fine gain (del PMT1) a 0.700 (V<sub>mon</sub> = 690 V).
  I dati di questo istogramma sono salvati sul file plot0503cal60Co.dat (trigger automatico).
@@ -164,9 +164,9 @@ PMT1amp $\rightarrow$ Attenuatore $\rightarrow$ TENNELEC $\rightarrow$ CAEN N957
  
  Da oggi in poi iniziamo una procedura di controllo dei punti lavoro e della calibrazione:
  * punti di lavoro
-    | V<sub>mon1</sub> [V] | coarse gain PMT1a | fine gain PMT1a | attenuazione [dB] PMT1a | V<sub>mon2</sub> [V] | V_th1b | V_th2 |
-    | -------------------- | ----------------- | --------------- | ----------------------- | ---------------------|--------|------|
-    | 690                   | 10                | 0.700            | 5.5                    |     1788             |-259.5 mV|   -151.8 mV|
+    | V<sub>mon1</sub> [V] | coarse gain PMT1a | fine gain PMT1a | attenuazione [dB] PMT1a | V<sub>mon2</sub> [V] | V_th1b    | V_th2     |
+    | -------------------- | ----------------- | --------------- | ----------------------- | -------------------- | --------- | --------- |
+    | 690                  | 10                | 0.700           | 5.5                     | 1788                 | -259.5 mV | -151.8 mV |
  * calibrazione
    * sodio: plot0504calNa.dat, plot0504calNa_1.dat
    * cesio: plot0504calCs.dat
@@ -179,4 +179,11 @@ PMT1amp $\rightarrow$ Attenuatore $\rightarrow$ TENNELEC $\rightarrow$ CAEN N957
  * cesio un picco in due grafici : 3414(107) (Cs), 3394(119) (Na)
  * picco osservato nello spettro del cesio in 1014(150) (Cs) --> chi è??
  
- 
+ ## 5 maggio
+
+ Procedure iniziali:
+ * punto di lavoro
+  abbiamo cambiato multimetro (usato per misurare le tensioni di discriminazione)
+    | V<sub>mon1</sub> [V] | coarse gain PMT1a | fine gain PMT1a | attenuazione [dB] PMT1a | V<sub>mon2</sub> [V] | V_th1b    | V_th2     |
+    | -------------------- | ----------------- | --------------- | ----------------------- | -------------------- | --------- | --------- |
+    | 693                  | 10                | 0.700           | 5.5                     | 1790                 | -258.0 mV | -151.0 mV |
