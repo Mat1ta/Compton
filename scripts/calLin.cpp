@@ -1,5 +1,4 @@
 #include <iostream>
-#include <vector>
 #include "TF1.h"
 #include "TGraphErrors.h"
 #include "TMultiGraph.h"
