@@ -2,27 +2,46 @@
 #include <vector>
 #include "TF1.h"
 #include "TGraphErrors.h"
+#include "TMultiGraph.h"
 #include "TCanvas.h"
 #include "TLegend.h"
-#include "Fit/FitResult.h"
+#include "TFitResult.h"
+#include "TFitResultPtr.h"
 #include "TPaveText.h"
+#include "TAxis.h"
+#include "TStyle.h"
 
-TLegend * drawLegend(TGraph * leg_plot1, TF1 * leg_func_linear){
-    TLegend * legend = new TLegend(0.1, 0.7, 0.4, 0.8);
+TLegend * drawLegend(TGraph * leg_plot1, TGraph * leg_plot2, TF1 * leg_func_linear){
+    TLegend * legend = new TLegend(0.15, 0.7, 0.35, 0.85, "", "NDC nb");
     legend->SetBorderSize(0.);
     legend->SetTextFont(42);
-    legend->AddEntry(leg_plot1, "Data", "E");
+    legend->SetTextSizePixels(22);
+    legend->SetFillColorAlpha(0,0.0);
+    legend->AddEntry(leg_plot1, "^{22}Na", "EP");
+    legend->AddEntry(leg_plot2, "^{137}Cs", "EP");
     legend->AddEntry(leg_func_linear, "best-fit", "L");
     legend->Draw();
     return legend;
 }
 
-TPaveText * drawInfos(TFitResultPtr r){
-    TPaveText * infos = new TPaveText(0.1, 0.3, 0.4, 0.4, "NDC nb");
-    infos->AddText("Ciao");
-    infos->AddText("Come va?");
+TPaveText * drawInfos(){
+    TPaveText * infos = new TPaveText(0.55, 0.8, 0.35, 0.85, "NDC nb");
+    infos->SetTextFont(42);
+    infos->SetTextSizePixels(22);
+    infos->SetFillColorAlpha(0,0.0);
+    infos->AddText("Plot 06/05/22");
     infos->Draw();
     return infos; 
+}
+
+void fancyPlot(TMultiGraph * plt, TGraphErrors * plt1, TGraphErrors * plt2){
+    plt->GetXaxis()->SetTitle("E [MeV]"); plt->GetXaxis()->SetTitleSize(0.045);
+    plt->GetYaxis()->SetTitle("bin [u.a.]"); plt->GetYaxis()->SetTitleSize(0.045);
+    plt->GetYaxis()->SetTitleOffset(1.05);
+    plt1->SetMarkerStyle(20);
+    plt1->SetMarkerColor(3);
+    plt2->SetMarkerStyle(21);
+    plt2->SetMarkerColor(4);
 }
 
 Double_t linear(Double_t * x, Double_t * p){
@@ -32,20 +51,31 @@ Double_t linear(Double_t * x, Double_t * p){
 
 void calLin(){
 
-    // Sources order: Na_low, Cs_0, Cs_1, Na_high
-    Double_t bin_value[4] = {2637, 3394, 3414, 6381};
-    Double_t bin_errors[4] = {96, 119, 107, 187};
-    Double_t eV_value[4] = {0.511, 0.662, 0.662, 1.275}; // MeV
-    Double_t eV_errors[4] = {0, 0, 0, 0};
+    gStyle->SetOptStat(1111); gStyle->SetOptFit(1111);
+    gStyle->SetStatBorderSize(0.);
+    gStyle->SetStatX(.89); gStyle->SetStatY(.35); gStyle->SetFillColorAlpha(0,0.);
+
+    // Sources
+    Double_t binNa_val[2] = {2637, 6381};
+    Double_t binNa_err[2] = {96, 187};
+    Double_t binCs_val[2] = {3394, 3414};
+    Double_t binCs_err[2] = {119, 107};
+    Double_t eVNa_val[2] = {0.511, 1.275}; // MeV
+    Double_t eVCs_val[2] = {0.662, 0.662}; // MeV
+    Double_t eV_err[2] = {0, 0};
 
     TCanvas * c1 = new TCanvas("c1", "c1", 1);
     TF1 * func_linear = new TF1("linear", linear, 0, 8000, 2); 
-    TGraphErrors * plot1 = new TGraphErrors(4, eV_value, bin_value, eV_errors, bin_errors);
-
     func_linear->SetParNames("m", "q");
-    plot1->Draw("AP");
-    TFitResultPtr r = plot1->Fit("linear");
+    TGraphErrors * plotNa = new TGraphErrors(2, eVNa_val, binNa_val, eV_err, binNa_err);
+    TGraphErrors * plotCs = new TGraphErrors(2, eVCs_val, binCs_val, eV_err, binCs_err);
+    TMultiGraph * plot = new TMultiGraph();
+    plot->Add(plotNa); plot->Add(plotCs);
 
-    TLegend * legend = drawLegend(plot1, func_linear);
-    TPaveText * infos = drawInfos(r);
+    // Plot, fit and fancy graph
+    plot->Draw("AP");
+    TFitResultPtr r = plot->Fit("linear", "S");
+    TLegend * legend = drawLegend(plotNa, plotCs, func_linear);
+    TPaveText * infos = drawInfos();
+    fancyPlot(plot, plotNa, plotCs);
 }
