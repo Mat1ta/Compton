@@ -74,7 +74,8 @@ void calLin(){
 
     // Plot, fit and fancy graph
     plot->Draw("AP");
-    TFitResultPtr r = plot->Fit("linear", "S");
+    TFitResultPtr r = plot->Fit("linear", "CS");
+    r->Print();
     TLegend * legend = drawLegend(plotNa, plotCs, func_linear);
     TPaveText * infos = drawInfos();
     fancyPlot(plot, plotNa, plotCs);
