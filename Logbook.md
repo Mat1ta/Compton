@@ -203,3 +203,33 @@ PMT1amp $\rightarrow$ Attenuatore $\rightarrow$ TENNELEC $\rightarrow$ CAEN N957
  <img src="plot_jpegs/plot0505th15d01_01.jpg"/>
  
  Facciamo due misure di calibrazione col sodio (plot0505calNa.dat) e col Cesio (plot0505calCs.dat).
+ 
+ ## 10 maggio
+ 
+ Procedure iniziali:
+ * punto di lavoro
+  siamo tornati al multimetro iniziale (usato per misurare le tensioni di discriminazione)
+    | V<sub>mon1</sub> [V] | coarse gain PMT1a | fine gain PMT1a | attenuazione [dB] PMT1a | V<sub>mon2</sub> [V] | V_th1b    | V_th2     |
+    | -------------------- | ----------------- | --------------- | ----------------------- | -------------------- | --------- | --------- |
+    | 690                  | 10                | 0.700           | 5.5                     | 1789                 | -260.0 mV | -152.0 mV |
+ 
+ Facciamo una presa dati dello spettro della sorgente all'interno della scatola: plot0510cal60Co.dat (30 secondi).
+ 
+ <img src="plot_jpegs/spettro_sorgente0510.jpg"/>
+ 
+ Con i segnali in coincidenza entrambi a 152 ns, e faccimao partire l'acquisizione col carrello a 13 cm dall'inizio della guida: plot0510th15d13T150.dat (0h17).
+ 
+ <img src="plot_jpegs/plot0510the15d13T150.jpg"/>
+ 
+ Facciamo le calibrazioni (16:30 cca):
+ * cobalto plot0510calCo.dat (60 secondi)
+ * cesio plot0510calCs.dat (30 secondi)
+ * sodio plot0510calNa.dat (240 secondi)
+ * cobalto smorzato (21.5 cm sulla guida a 5 gradi) plot0510cal60Co_1.dat
+ 
+ Con i segnali in coincidenza entrambi a 152 ns, e faccimao partire l'acquisizione col carrello a 13 cm dall'inizio della guida: plot0510th15d13T150_1.dat (1h13).
+ 
+ Facciamo un'altra calibrazione (18:36):
+ * sodio plot0510calNa_1.dat (240 secondi)
+ * cesio plot0510calCs_1.dat (30 secondi)
+ * cobalto plot0510calCo.dat (60 secondi)
