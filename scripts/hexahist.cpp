@@ -49,7 +49,7 @@ void hexahist(std::string fname){
     std::string element;
 
     TCanvas * c1 = new TCanvas("c1", "c1", 1);
-    TH1F * h1 = new TH1F("h1", "h1", 500, 0, 8000);
+    TH1F * h1 = new TH1F("h1", "h1", 1000, 0, 8000);
 
     while (fin >> element){
         unsigned int value = std::stoul(element, nullptr, 16);
