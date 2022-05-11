@@ -45,11 +45,10 @@ TPaveText * drawInfos(){
 
 void hexahist(std::string fname){
     std::ifstream fin("../dati/" + fname);
-    std::vector<int> data;
     std::string element;
 
     TCanvas * c1 = new TCanvas("c1", "c1", 1);
-    TH1F * h1 = new TH1F("h1", "h1", 500, 0, 8000);
+    TH1F * h1 = new TH1F("h1", "h1", 70, 0, 8000);
 
     while (fin >> element){
         unsigned int value = std::stoul(element, nullptr, 16);
@@ -65,5 +64,4 @@ void hexahist(std::string fname){
     h1->Draw();
 //    TPaveText * infos = drawInfos();
     fancyPlot(h1);
-
 }
