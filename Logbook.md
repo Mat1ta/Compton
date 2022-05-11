@@ -117,12 +117,13 @@ PMT1amp $\rightarrow$ Attenuatore $\rightarrow$ TENNELEC $\rightarrow$ CAEN N957
  Facciamo la coincidenza tra i due seganli modificati come sopra, ed essa viene allargata a 1 us con il modulo quad gate
  Iniziamo a salvare un file di eventi triggerati sulla coincidenza tra così fatta. Il nome del file è plot0427.log, l'angolo del cristallo è 34 gradi.
  
- <img src="plot_jpegs/plot0427.jpg"/> ----- da FARE jpg e (pdf)
+ <img src="plot_jpegs/plot0427.jpg"/>
+ 
  ## 28 aprile
  
  Avviamo il progrmma per fare una presa dati con le stesse condizini di ieri: plot0428_1890.dat
  
- <img src="plot_jpegs/plot0428_1890.jpg"/> ----- da FARE jpg e (pdf)
+ <img src="plot_jpegs/plot0428_1890.jpg"/>
  
  Abbassiamo la tensione di alimentazione del PMT2 a 1790 V (dato che la tensione massima è 1800 V).
  Amplifichiamo di un fattore 10 il segnale del PMT2 prima di mandarlo al discriminatore, la cui sogli aviene alzata a -150 mV (così che la soglia di discriminazione sul segnale non ambplificato sia di -15 mV).
@@ -130,16 +131,16 @@ PMT1amp $\rightarrow$ Attenuatore $\rightarrow$ TENNELEC $\rightarrow$ CAEN N957
  
  Iniziamo una run con queste condizioni (avendo controllato che la coincidenza fosse ancora corretta): plot0428th30.log.
  
-<image src="plot_jpegs/plot0428th30.jpg"/> ----- da FARE jpg
+<image src="plot_jpegs/plot0428th30.jpg"/> 
  
  Ne facciamo un'altra con il cristallo ad angolo 15 gradi: plot0428th15.log
  
- <img src="plot_jpegs/plot0428th15.jpg"/> ----- da FARE jpg
+ <img src="plot_jpegs/plot0428th15.jpg"/>
  
  Amplifichiamo anche il PMT1b, con lo scopo di abbassare la sua tensione di soglia così da poter vedere uno spettro più ampio in energia.
  Questa run è salvata nel file plot0428th15bis.log
  
- <img src="plot_jpegs/plot0428th15bis.jpg"/> ----- da FARE jpg
+ <img src="plot_jpegs/plot0428th15bis.jpg"/>
  
 ## 3 maggio
  Briefing:
@@ -158,12 +159,12 @@ PMT1amp $\rightarrow$ Attenuatore $\rightarrow$ TENNELEC $\rightarrow$ CAEN N957
  I dati di questo istogramma sono salvati sul file plot0503cal60Co.dat (trigger automatico).
  Il primo picco è 6457(192), il secondo è 7281(188).
  
- <img scr="plot_jpegs/plot0503cal60Co.jpg"/> ----- da FARE jpg e pdf
+ <img scr="plot_jpegs/plot0503cal60Co.jpg"/>
  
  Facciamo una presa dati a 15 gradi col setup così fatto (gate quello della volta scorsa, con i segnali dei due PMT in coincidenza sono entrambi amplificati e il fine gain del cristalllo modificato come sopra): plot0503th15_0.dat  e plot0503th15_1.dat (quest'ultimo comprende i dati del primo: è stata messa in "pausa" l'acquisizione).
  
- <img scr="plot_jpegs/plot0503th15.jpg"/> ----- da FARE jpg e pdf
- <img scr="plot_jpegs/plot0503th15_1.jpg"/> ----- da FARE jpg e pdf
+ <img scr="plot_jpegs/plot0503th15.jpg"/> 
+ <img scr="plot_jpegs/plot0503th15_1.jpg"/>
  
 ## 4 maggio
  Misuro il diametro del cristallo col calibro: 5.860(5) cm.
@@ -176,9 +177,9 @@ PMT1amp $\rightarrow$ Attenuatore $\rightarrow$ TENNELEC $\rightarrow$ CAEN N957
     | -------------------- | ----------------- | --------------- | ----------------------- | -------------------- | --------- | --------- |
     | 690                  | 10                | 0.700           | 5.5                     | 1788                 | -259.5 mV | -151.8 mV |
  * calibrazione
-   * sodio: plot0504calNa.dat, plot0504calNa_1.dat
- <img scr="plot_jpegs/plot0504calNa.jpg"/> ----- da FARE jpg e pdf
- <img scr="plot_jpegs/plot0504calNa_1.jpg"/> ----- da FARE jpg e pdf
+   * sodio: plot0504calNa_0.dat, plot0504calNa_1.dat
+ <img scr="plot_jpegs/plot0504calNa_0.jpg"/> 
+ <img scr="plot_jpegs/plot0504calNa_1.jpg"/> 
    * cesio: plot0504calCs.dat
  <img scr="plot_jpegs/plot0504calCs.jpg"/> ----- da FARE jpg e pdf
  
@@ -186,7 +187,7 @@ PMT1amp $\rightarrow$ Attenuatore $\rightarrow$ TENNELEC $\rightarrow$ CAEN N957
  
  Iniziamo una presa dati a 15 gradi: plot0504th15.dat (1h55). 
 
- <img scr="plot_jpegs/plot0504th15.jpg"/> ----- da FARE jpg e pdf
+ <img scr="plot_jpegs/plot0504th15.jpg"/> 
  
  Nel frattenpo si fa un'analisi approssimativa dei dati di calibrazione:
  * sodio due picchi : 6381(187) e 2637(96) (Na)
@@ -218,8 +219,8 @@ PMT1amp $\rightarrow$ Attenuatore $\rightarrow$ TENNELEC $\rightarrow$ CAEN N957
  
  Facciamo due misure di calibrazione col sodio (plot0505calNa.dat) e col Cesio (plot0505calCs.dat).
  
- <img scr="plot_jpegs/plot0505calNa.jpg"/> ----- da FARE jpg e pdf
- <img scr="plot_jpegs/plot0505calCs.jpg"/> ----- da FARE jpg e pdf
+ <img scr="plot_jpegs/plot0505calNa.jpg"/>
+ <img scr="plot_jpegs/plot0505calCs.jpg"/>
  
  ## 10 maggio
  
@@ -232,7 +233,7 @@ PMT1amp $\rightarrow$ Attenuatore $\rightarrow$ TENNELEC $\rightarrow$ CAEN N957
  
  Facciamo una presa dati dello spettro della sorgente all'interno della scatola: plot0510cal60Co.dat (30 secondi).
  
- <img src="plot_jpegs/spettro_sorgente0510.jpg"/>
+ <img src="plot_jpegs/plot0510cal60Co.jpg"/>
  
  Con i segnali in coincidenza entrambi a 152 ns, e faccimao partire l'acquisizione col carrello a 13 cm dall'inizio della guida: plot0510th15d13T150.dat (0h17).
  
