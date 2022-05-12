@@ -12,7 +12,7 @@
 
 Double_t GausBg(Double_t * x, Double_t * p){
     Double_t xx = x[0];
-    return p[0]*TMath::Exp(-xx / p[1]) + p[4]*TMath::Gaus(xx, p[2], p[3], false) + p[5];
+    return p[0] + p[1] * xx + p[2] * TMath::Gaus(xx, p[3], p[4], false);
 }
 
 TLegend * drawLegend(TH1F * leg_h1, TF1 * leg_f1){
@@ -21,32 +21,37 @@ TLegend * drawLegend(TH1F * leg_h1, TF1 * leg_f1){
     legend->SetTextFont(42);
     legend->SetTextSizePixels(22);
     legend->SetFillColorAlpha(0,0.0);
-    legend->AddEntry(leg_h1, "^{22}Na", "EP");
-    legend->AddEntry(leg_f1, "^{137}Cs", "L");
+    legend->AddEntry(leg_h1, "^{137}Cs", "L");
+    legend->AddEntry(leg_f1, "best-fit", "L");
     legend->Draw();
     return legend;
 }
 
 void calCs(){
-    std::string fname = "plot0510calCs.dat";
+    gStyle->SetOptStat("e"); gStyle->SetOptFit(1111);
+    gStyle->SetStatBorderSize(0.);
+    gStyle->SetStatX(.92); gStyle->SetStatY(.89);
+
+    std::string fname = "plot0512calCs_0.dat";
     std::ifstream fin("../dati/" + fname);
-    std::vector<int> data;
     std::string element;
 
     TCanvas * c1 = new TCanvas("c1", "c1", 1);
-    TH1F * h1 = new TH1F("h1", "h1", 100, 2500, 4500);
-    TF1 * func = new TF1("gausbg", GausBg, 2500, 4500, 6);
-    Double_t pars[] = {50, 333, 3600, 100, 1500, 0};
-    func->SetParameters(pars);
-
+    TH1F * h1 = new TH1F("h1", "h1", 100, 2800, 4200);
     while (fin >> element){
         unsigned int value = std::stoul(element, nullptr, 16);
         h1->Fill(value);
     }
+    h1->Draw();
+    TF1 * func = new TF1("gausbg", GausBg, 2800, 4200, 5);
+    Double_t A_0 = h1->GetBinContent(h1->GetMaximumBin()); // mode
+    Double_t mu = h1->GetMean();
+    Double_t pars[] = {40, -0.01, A_0, mu, 100}; // q, m, A_0, mean, sigma
+    func->SetParameters(pars);
+    func->SetParNames("q", "m", "A_{0}", "#mu", "#sigma");
+    func->Draw("SAME");
 
     // Plot, fit and fancy graph
-    gStyle->SetOptStat(0110); gStyle->SetOptFit(1111);
-    h1->Draw();
-    TFitResultPtr r = h1->Fit("gausbg", "LMS");
+    TFitResultPtr r = h1->Fit("gausbg", "LMS"); r->Print();
     TLegend * legend = drawLegend(h1, func);
 }
