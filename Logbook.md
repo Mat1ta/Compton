@@ -194,6 +194,10 @@ PMT1amp $\rightarrow$ Attenuatore $\rightarrow$ TENNELEC $\rightarrow$ CAEN N957
  * cesio un picco in due grafici : 3414(107) (Cs), 3394(119) (Na)
  * picco osservato nello spettro del cesio in 1014(150) (Cs) --> chi è??
  
+ Fit di calibrazione:
+ 
+ <img scr="plot_jpegs/calLin0504.jpg"/> ---------- da FARE
+ 
  ## 5 maggio
 
  Procedure iniziali:
@@ -222,6 +226,10 @@ PMT1amp $\rightarrow$ Attenuatore $\rightarrow$ TENNELEC $\rightarrow$ CAEN N957
  <img scr="plot_jpegs/plot0505calNa.jpg"/>
  <img scr="plot_jpegs/plot0505calCs.jpg"/>
  
+ Fit di calibrazione:
+ 
+ <img scr="plot_jpegs/calLin0505.jpg"/> ---------- da FARE
+ 
  ## 10 maggio
  
  Procedure iniziali:
@@ -247,22 +255,29 @@ PMT1amp $\rightarrow$ Attenuatore $\rightarrow$ TENNELEC $\rightarrow$ CAEN N957
  * sodio plot0510calNa.dat (240 secondi)
  <img scr="plot_jpegs/plot0510calNa.jpg"/> ----- da FARE jpg e pdf
  
- Cobalto smorzato (21.5 cm sulla guida a 5 gradi) plot0510cal60Co_1.dat -> i picchi si spostano con dipendenza dal rate (intensità) della sorgente.
+ Fit di calibrazione:
  
- <img scr="plot_jpegs/plot0510cal60Co_1.jpg"/> ----- da FARE jpg e pdf
+ <img scr="plot_jpegs/calLin0510in.jpg"/> ---------- da FARE
+ 
+ Cobalto (quello dentro al "sarcofago") smorzato (21.5 cm sulla guida a 5 gradi) plot0510cal60Co_1.dat -> i picchi si spostano, allora c'è dipendenza dal rate (intensità) della sorgente.
+ 
+ <img scr="plot_jpegs/plot0510cal60Co_1.jpg"/> ----- da FARE
  
  Con i segnali in coincidenza entrambi a 152 ns, e faccimao partire l'acquisizione col carrello a 13 cm dall'inizio della guida: plot0510th15d13T150_1.dat (1h13).
  
- <img scr="plot_jpegs/plot0510th15d13T150_1.jpg"/> ----- da FARE jpg e pdf
+ <img scr="plot_jpegs/plot0510th15d13T150_1.jpg"/> ----- da FARE
  
  Facciamo un'altra calibrazione (18:36):
  * sodio plot0510calNa_1.dat (240 secondi)
- <img scr="plot_jpegs/plot0510calNa_1.jpg"/> ----- da FARE jpg e pdf
+ <img scr="plot_jpegs/plot0510calNa_1.jpg"/> ----- da FARE jpg
  * cesio plot0510calCs_1.dat (30 secondi)
- <img scr="plot_jpegs/plot0510calCs_1.jpg"/> ----- da FARE jpg e pdf
+ <img scr="plot_jpegs/plot0510calCs_1.jpg"/> ----- da FARE jpg
  * cobalto plot0510calCo_1.dat (60 secondi)
- <img scr="plot_jpegs/plot0510calCo_1.jpg"/> ----- da FARE jpg e pdf
+ <img scr="plot_jpegs/plot0510calCo_1.jpg"/> ----- da FARE jpg
 
+ Fit di calibrazione:
+ 
+ <img scr="plot_jpegs/calLin0510fin.jpg"/> ---------- da FARE
  
  ## 11 maggio
  
@@ -282,7 +297,11 @@ PMT1amp $\rightarrow$ Attenuatore $\rightarrow$ TENNELEC $\rightarrow$ CAEN N957
    * cobalto plot0511calCo.dat (70 secondi) 
  <img scr="plot_jpegs/plot0511calCo.jpg"/> ----- da FARE jpg e pdf
  
- facciamo una presa dati a 22 gradi: plot0511th22d13T150.dat (1h32).
+ Fit di calibrazione:
+ 
+ <img scr="plot_jpegs/calLin0511in.jpg"/> ---------- da FARE
+ 
+ Facciamo una presa dati a 22 gradi: plot0511th22d13T150.dat (1h32).
  
  <img src="plot_jpegs/plot0511th22d13T150.jpg"/>
  
@@ -295,13 +314,29 @@ PMT1amp $\rightarrow$ Attenuatore $\rightarrow$ TENNELEC $\rightarrow$ CAEN N957
    * cobalto plot0511calCo_1.dat (97 secondi) 
  <img scr="plot_jpegs/plot0511calCo_1.jpg"/> ----- da FARE jpg e pdf
  
+ Fit di calibrazione:
+ 
+ <img scr="plot_jpegs/calLin0511fin.jpg"/> ---------- da FARE
  
  ## 12 maggio
- Andiamo in laboratorio alle 9:00 per iniziare una presa dati: plot0512th22d13T150.dat (7h)
+ Andiamo in laboratorio alle 9:00 per iniziare una presa dati: plot0512th22d13T150.dat (inizio 9:15-fine ? =7h)
+ * punto di lavoro alle 9:15
+  siamo tornati al multimetro iniziale (usato per misurare le tensioni di discriminazione)
+    | V<sub>mon1</sub> [V] | coarse gain PMT1a | fine gain PMT1a | attenuazione [dB] PMT1a | V<sub>mon2</sub> [V] | V_th1b    | V_th2     |
+    | -------------------- | ----------------- | --------------- | ----------------------- | -------------------- | --------- | --------- |
+    | 694                  | 10                | 0.700           | 5.5                     | 1789                 | -301.4 mV | -151.9 mV |
  
+ Torniamo in laboratorio alle 16:30.
  Procedure iniziali:
  * punto di lavoro
   siamo tornati al multimetro iniziale (usato per misurare le tensioni di discriminazione)
     | V<sub>mon1</sub> [V] | coarse gain PMT1a | fine gain PMT1a | attenuazione [dB] PMT1a | V<sub>mon2</sub> [V] | V_th1b    | V_th2     |
     | -------------------- | ----------------- | --------------- | ----------------------- | -------------------- | --------- | --------- |
     | 694                  | 10                | 0.700           | 5.5                     | 1789                 | -301.9 mV | -152.2 mV |
+ * calibrazione (16:55):
+   * sodio plot0511calNa.dat ( secondi)
+ <img scr="plot_jpegs/plot0512calNa.jpg"/> ----- da FARE 
+   * cesio plot0512calCs.dat ( secondi)
+ <img scr="plot_jpegs/plot0511calCs.jpg"/> ----- da FARE 
+   * cobalto plot0512calCo.dat ( secondi) 
+ <img scr="plot_jpegs/plot0511calCo.jpg"/> ----- da FARE
