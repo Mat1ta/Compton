@@ -150,10 +150,10 @@ PMT1amp $\rightarrow$ Attenuatore $\rightarrow$ TENNELEC $\rightarrow$ CAEN N957
  * misura del rumore (?)
  
  Usando l'equazione dell'effetto compton ci si aspetta le seguenti energie per i fotoni scatterati ad angolo theta:
- | theta     | 0    | 15   | 30   |
- | --------- | ---- | ---- | ---- |
- | E_1 [MeV] | 1.17 | 1.08 | 0.89 |
- | E_1 [MeV] | 1.33 | 1.22 | 0.99 |
+ | theta     | 0    | 15   | 22   | 30   |
+ | --------- | ---- | ---- | ---- | ---- |
+ | E_1 [MeV] | 1.17 | 1.08 | 1.00 | 0.89 |
+ | E_1 [MeV] | 1.33 | 1.22 | 1.12 | 0.99 |
  
  Facciamo una prima calibrazione usando la sorgente di cobaldo diretta sul cristallo (theta=0), ci aspettiamo due picchi: uno a 1 MeV e uno a 1.2 MeV. Vediamo che il grafico satura sul secondo picco: decidiamo di cambiare il fine gain (del PMT1) a 0.700 (V<sub>mon</sub> = 690 V).
  I dati di questo istogramma sono salvati sul file plot0503cal60Co.dat (trigger automatico).
@@ -319,7 +319,7 @@ PMT1amp $\rightarrow$ Attenuatore $\rightarrow$ TENNELEC $\rightarrow$ CAEN N957
  <img scr="plot_jpegs/calLin0511fin.jpg"/> ---------- da FARE
  
  ## 12 maggio
- Andiamo in laboratorio alle 9:00 per iniziare una presa dati: plot0512th22d13T150.dat (inizio 9:15-fine ? =7h)
+ Andiamo in laboratorio alle 9:00 per iniziare una presa dati: plot0512th22d13T150.dat (inizio 9:15-fine 16:40 = 26677.314 s)
  * punto di lavoro alle 9:15
   siamo tornati al multimetro iniziale (usato per misurare le tensioni di discriminazione)
     | V<sub>mon1</sub> [V] | coarse gain PMT1a | fine gain PMT1a | attenuazione [dB] PMT1a | V<sub>mon2</sub> [V] | V_th1b    | V_th2     |
@@ -332,11 +332,28 @@ PMT1amp $\rightarrow$ Attenuatore $\rightarrow$ TENNELEC $\rightarrow$ CAEN N957
   siamo tornati al multimetro iniziale (usato per misurare le tensioni di discriminazione)
     | V<sub>mon1</sub> [V] | coarse gain PMT1a | fine gain PMT1a | attenuazione [dB] PMT1a | V<sub>mon2</sub> [V] | V_th1b    | V_th2     |
     | -------------------- | ----------------- | --------------- | ----------------------- | -------------------- | --------- | --------- |
-    | 694                  | 10                | 0.700           | 5.5                     | 1789                 | -301.9 mV | -152.2 mV |
- * calibrazione (16:55):
-   * sodio plot0511calNa.dat ( secondi)
- <img scr="plot_jpegs/plot0512calNa.jpg"/> ----- da FARE 
-   * cesio plot0512calCs.dat ( secondi)
- <img scr="plot_jpegs/plot0511calCs.jpg"/> ----- da FARE 
-   * cobalto plot0512calCo.dat ( secondi) 
- <img scr="plot_jpegs/plot0511calCo.jpg"/> ----- da FARE
+    | 694                  | 10                | 0.700           | 5.5                     | 1792                 | -302.7 mV | -152.2 mV |
+ * calibrazione (16:46, il cobalto è stato usato invece alle 16:58 perche' occupato da altri):
+   * sodio plot0512calNa_0.dat ( 175 secondi)
+     <img scr="plot_jpegs/plot0512calNa_0.jpg"/> ----- da FARE 
+   * cesio plot0512calCs_0.dat ( 37 secondi)
+     <img scr="plot_jpegs/plot0512calCs_0.jpg"/> ----- da FARE 
+   * cobalto plot0512calCo_0.dat ( 42 secondi) 
+     <img scr="plot_jpegs/plot0512calCo_0.jpg"/> ----- da FARE
+
+ Iniziamo una presa dati a 30 gradi: plot0512th30d13T150.dat (5057 s).
+ 
+ <img scr="plot_jpegs/plot0512th30d13T150.jpg"/> ----- da FARE
+ 
+ Dato che le distribuzione in energia delle sorgenti di calibrazione non sono delle gaussiane, scegliamo di utilizzare un estimatore diverso dalla media: la moda. Parlando col professore ci si presentano due modi per il calcolo della moda:
+ * binned, cercando il massimo di occorrenze nell'istogramma
+ * unbinned, cercando nel set di dati i due valori più vicini tra loro
+ In entrambi i casi per trovare l'errore sulla moda si fa un [bootstrap](https://en.wikipedia.org/wiki/Bootstrapping_(statistics)).
+ 
+ * Calibrazione finale (18:45):
+   * sodio plot0512calNa_1.dat ( 39 secondi)
+     <img scr="plot_jpegs/plot0512calNa_1.jpg"/> ----- da FARE 
+   * cesio plot0512calCs_1.dat ( 20 secondi)
+     <img scr="plot_jpegs/plot0512calCs_1.jpg"/> ----- da FARE 
+   * cobalto plot0512calCo_1.dat ( 40 secondi) 
+     <img scr="plot_jpegs/plot0512calCo_1.jpg"/> ----- da FARE
