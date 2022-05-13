@@ -15,10 +15,10 @@ BIN = 100 # Bins in temp histogram
 
 if __name__ == '__main__':
     
-    fname = '../dati/plot0510calCs.dat'
+    fname = '../dati/plot0510calNa.dat'
     arr = np.array([int(hexa, base=16) for hexa in np.genfromtxt(fname, dtype='str')])
     mask1 = arr > 2000
-    mask2 = arr < 5000
+    mask2 = arr < 4000
     arr = arr[mask1 & mask2]
 
     mode = np.zeros(REP)

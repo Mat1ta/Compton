@@ -63,7 +63,7 @@ Note sulla ultima parte in compagnia del professore Dell'Orso:
 PMT1amp $\rightarrow$ Attenuatore $\rightarrow$ TENNELEC $\rightarrow$ CAEN N957.
 
 ## 26 aprile
- Fissiamo il putno di lavoro del PMT1:
+ Fissiamo il punto di lavoro del PMT1:
  V<sub>mon</sub> = 649 V, corse gain=10, fine gain = 0.942, attenuazione = 1.5 dB.
  
  Misuraimo la variazione di rate diretto (theta = 0) com e senza PMT2:
@@ -348,7 +348,8 @@ PMT1amp $\rightarrow$ Attenuatore $\rightarrow$ TENNELEC $\rightarrow$ CAEN N957
  Dato che le distribuzione in energia delle sorgenti di calibrazione non sono delle gaussiane, scegliamo di utilizzare un estimatore diverso dalla media: la moda. Parlando col professore ci si presentano due modi per il calcolo della moda:
  * binned, cercando il massimo di occorrenze nell'istogramma
  * unbinned, cercando nel set di dati i due valori più vicini tra loro
- In entrambi i casi per trovare l'errore sulla moda si fa un [bootstrap](https://en.wikipedia.org/wiki/Bootstrapping_(statistics)).
+
+In entrambi i casi per trovare l'errore sulla moda si fa un [bootstrap](https://en.wikipedia.org/wiki/Bootstrapping_(statistics)).
  
  * Calibrazione finale (18:45):
    * sodio plot0512calNa_1.dat ( 39 secondi)
@@ -357,3 +358,11 @@ PMT1amp $\rightarrow$ Attenuatore $\rightarrow$ TENNELEC $\rightarrow$ CAEN N957
      <img scr="plot_jpegs/plot0512calCs_1.jpg"/> ----- da FARE 
    * cobalto plot0512calCo_1.dat ( 40 secondi) 
      <img scr="plot_jpegs/plot0512calCo_1.jpg"/> ----- da FARE
+
+Eseguiamo e testiamo il bootstrap sui dati del 10 maggio per ottenere la moda dei vari picchi delle sorgenti di calibrazione. 
+Compariamo i risultati del fit quadratico, ottenuto con un fit locale con una curva gaussiana e con il metodo di stima della moda prima descritto:
+  |                         | $\chi^2$/ndf | _p-value_ | a            | b            | c           |
+  | ----------------------- | ------------ | --------- | ------------ | ------------ | ----------- |
+  | local _Gaussian_-fit    | $2.1/2$      | $0.35$    | $-368\pm20$  | $5783\pm37$  | $-90\pm15$  |
+  | _BOOTSTRAP_ mode        | $0.15/2$     | $0.93$    | $-250\pm293$ | $5551\pm540$ | $-13\pm214$ |
+  | _BOOTSTRAP_ mode (a==0) | $0.87/3$     | $0.83$    | $0$          | $5092\pm41$  | $192\pm38$  |
