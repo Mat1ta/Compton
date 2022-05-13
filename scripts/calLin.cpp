@@ -59,7 +59,7 @@ void getSources(Double_t * vNa, Double_t * vCs, Double_t * vCo, Double_t * eNa, 
     std::ifstream fin("../dati/" + name);
     std::string line, lline;
     int i = 0;
-    Double_t v[3][11];
+    Double_t v[5][11];
     while(std::getline(fin, line)){
         lline = line[0];
         if (lline != "#"){
@@ -75,7 +75,7 @@ void getSources(Double_t * vNa, Double_t * vCs, Double_t * vCo, Double_t * eNa, 
         }
     }
     i = 0;
-    Double_t date = 220510; // Select which calibration you want, format = yymmdd
+    Double_t date = 220610; // Select which calibration you want, format = yymmdd
     while (v[i][0] != date){
         i++;
     }
