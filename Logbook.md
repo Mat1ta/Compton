@@ -66,7 +66,7 @@ PMT1amp $\rightarrow$ Attenuatore $\rightarrow$ TENNELEC $\rightarrow$ CAEN N957
  Fissiamo il punto di lavoro del PMT1:
  V<sub>mon</sub> = 649 V, corse gain=10, fine gain = 0.942, attenuazione = 1.5 dB.
  
- Misuraimo la variazione di rate diretto (theta = 0) com e senza PMT2:
+ Misuraimo la variazione di rate diretto ($\theta = 0$) com e senza PMT2:
  senza PMT2 7.5 kHz, con 7.3 kHz (soglia di trigger = -8 mV)
  
  Faccimao un campionamento a diversi angoli dei fotoni incidenti:
@@ -85,7 +85,7 @@ PMT1amp $\rightarrow$ Attenuatore $\rightarrow$ TENNELEC $\rightarrow$ CAEN N957
  Inviamo al IN del CAEN N957 l'uscita del PMT1a: si vedono i due picchi del Co.
  Aumentando in valore assoluto questa soglia, i picchi venivano mano a mano mangiati
 
- Poiche' siamo al limite inferiore della soglia del discriminatore proviamo a cambiare il punto di lavoro del PMT1 aumentando V<sub>mon<\sub>.
+ Poiche' siamo al limite inferiore della soglia del discriminatore proviamo a cambiare il punto di lavoro del PMT1 aumentando V<sub>mon</sub>.
  Allora fissiamo il punto di lavoro del PMT1 a V<sub>mon</sub> = 689 V, corse gain=10, fine gain = 0.732, attenuazione = 5.5 dB.
  Fissiamo il punto di lavoro del PMT2 a Vmon = 1632 V (facendo la stessa considerazine di prima di variazione del rate del PMT1 con e senza targhetta). Ora la soglia del discriminatore è 41.6 e 36.5 rispettivamente per PMT1 e PMT2.
  
@@ -115,30 +115,30 @@ PMT1amp $\rightarrow$ Attenuatore $\rightarrow$ TENNELEC $\rightarrow$ CAEN N957
  Aumentiamo l'alimentazione del PMT2 a 1891 V.
  
  Facciamo la coincidenza tra i due seganli modificati come sopra, ed essa viene allargata a 1 us con il modulo quad gate
- Iniziamo a salvare un file di eventi triggerati sulla coincidenza tra così fatta. Il nome del file è plot0427.log, l'angolo del cristallo è 34 gradi.
+ Iniziamo a salvare un file di eventi triggerati sulla coincidenza tra così fatta. Il nome del file è `plot0427.log`, l'angolo del cristallo è 34 gradi.
  
  <img src="plot_jpegs/plot0427.jpg"/>
  
  ## 28 aprile
  
- Avviamo il progrmma per fare una presa dati con le stesse condizini di ieri: plot0428_1890.dat
+ Avviamo il progrmma per fare una presa dati con le stesse condizini di ieri: `plot0428_1890.dat`
  
  <img src="plot_jpegs/plot0428_1890.jpg"/>
  
  Abbassiamo la tensione di alimentazione del PMT2 a 1790 V (dato che la tensione massima è 1800 V).
- Amplifichiamo di un fattore 10 il segnale del PMT2 prima di mandarlo al discriminatore, la cui sogli aviene alzata a -150 mV (così che la soglia di discriminazione sul segnale non ambplificato sia di -15 mV).
+ Amplifichiamo di un fattore 10 il segnale del PMT2 prima di mandarlo al discriminatore, la cui sogli aviene alzata a -150 mV (così che la soglia di discriminazione sul segnale non amplificato sia di -15 mV).
  Le larghezze dei due segnali in coincidenza sono di 1 us.
  
- Iniziamo una run con queste condizioni (avendo controllato che la coincidenza fosse ancora corretta): plot0428th30.log.
+ Iniziamo una run con queste condizioni (avendo controllato che la coincidenza fosse ancora corretta): `plot0428th30.log`.
  
 <image src="plot_jpegs/plot0428th30.jpg"/> 
  
- Ne facciamo un'altra con il cristallo ad angolo 15 gradi: plot0428th15.log
+ Ne facciamo un'altra con il cristallo ad angolo 15 gradi: `plot0428th15.log`
  
  <img src="plot_jpegs/plot0428th15.jpg"/>
  
  Amplifichiamo anche il PMT1b, con lo scopo di abbassare la sua tensione di soglia così da poter vedere uno spettro più ampio in energia.
- Questa run è salvata nel file plot0428th15bis.log
+ Questa run è salvata nel file `plot0428th15bis.log`
  
  <img src="plot_jpegs/plot0428th15bis.jpg"/>
  
@@ -149,19 +149,19 @@ PMT1amp $\rightarrow$ Attenuatore $\rightarrow$ TENNELEC $\rightarrow$ CAEN N957
  * presa dati di un paio d'ore per fare delle considerazioni quantitative e sull'importanza del rumore
  * misura del rumore (?)
  
- Usando l'equazione dell'effetto compton ci si aspetta le seguenti energie per i fotoni scatterati ad angolo theta:
- | theta     | 0    | 15   | 22   | 30   |
- | --------- | ---- | ---- | ---- | ---- |
- | E_1 [MeV] | 1.17 | 1.08 | 1.00 | 0.89 |
- | E_1 [MeV] | 1.33 | 1.22 | 1.12 | 0.99 |
+ Usando l'equazione dell'effetto compton ci si aspetta le seguenti energie per i fotoni scatterati ad angolo $\theta$:
+ | $\theta$             | 0    | 15   | 22   | 30   |
+ | -------------------- | ---- | ---- | ---- | ---- |
+ | E<sub>1</sub> [MeV]  | 1.17 | 1.08 | 1.00 | 0.89 |
+ | E<sub>1</sub>} [MeV] | 1.33 | 1.22 | 1.12 | 0.99 |
  
  Facciamo una prima calibrazione usando la sorgente di cobaldo diretta sul cristallo (theta=0), ci aspettiamo due picchi: uno a 1 MeV e uno a 1.2 MeV. Vediamo che il grafico satura sul secondo picco: decidiamo di cambiare il fine gain (del PMT1) a 0.700 (V<sub>mon</sub> = 690 V).
- I dati di questo istogramma sono salvati sul file plot0503cal60Co.dat (trigger automatico).
+ I dati di questo istogramma sono salvati sul file `plot0503cal60Co.dat` (trigger automatico).
  Il primo picco è 6457(192), il secondo è 7281(188).
  
  <img scr="plot_jpegs/plot0503cal60Co.jpg"/>
  
- Facciamo una presa dati a 15 gradi col setup così fatto (gate quello della volta scorsa, con i segnali dei due PMT in coincidenza sono entrambi amplificati e il fine gain del cristalllo modificato come sopra): plot0503th15_0.dat  e plot0503th15_1.dat (quest'ultimo comprende i dati del primo: è stata messa in "pausa" l'acquisizione).
+ Facciamo una presa dati a 15 gradi col setup così fatto (gate quello della volta scorsa, con i segnali dei due PMT in coincidenza sono entrambi amplificati e il fine gain del cristalllo modificato come sopra): `plot0503th15_0.dat` e `plot0503th15_1.dat` (quest'ultimo comprende i dati del primo: è stata messa in "pausa" l'acquisizione).
  
  <img scr="plot_jpegs/plot0503th15.jpg"/> 
  <img scr="plot_jpegs/plot0503th15_1.jpg"/>
@@ -177,15 +177,15 @@ PMT1amp $\rightarrow$ Attenuatore $\rightarrow$ TENNELEC $\rightarrow$ CAEN N957
     | -------------------- | ----------------- | --------------- | ----------------------- | -------------------- | --------- | --------- |
     | 690                  | 10                | 0.700           | 5.5                     | 1788                 | -259.5 mV | -151.8 mV |
  * calibrazione
-   * sodio: plot0504calNa_0.dat, plot0504calNa_1.dat
+   * sodio: `plot0504calNa_0.dat`, `plot0504calNa_1.dat`
  <img scr="plot_jpegs/plot0504calNa_0.jpg"/> 
  <img scr="plot_jpegs/plot0504calNa_1.jpg"/> 
-   * cesio: plot0504calCs.dat
+   * cesio: `plot0504calCs.dat`
  <img scr="plot_jpegs/plot0504calCs.jpg"/> ----- da FARE jpg e pdf
  
  Si osserva che se la scatola con le sorgenti non viene schermata dal Pb, il picco del Cesio si vede sempre, in quanto la scatola non è sufficiente a schermarne i fotoni.
  
- Iniziamo una presa dati a 15 gradi: plot0504th15.dat (1h55). 
+ Iniziamo una presa dati a 15 gradi: `plot0504th15.dat` (1h55). 
 
  <img scr="plot_jpegs/plot0504th15.jpg"/> 
  
@@ -209,19 +209,19 @@ PMT1amp $\rightarrow$ Attenuatore $\rightarrow$ TENNELEC $\rightarrow$ CAEN N957
  
  
  Abbiamo stretto i segnali che erano in coincidenza a 300 ns.
- Facciamo così un'acquisizione a 15 gradi: plot0505th15d01.dat (0h17).
+ Facciamo così un'acquisizione a 15 gradi: `plot0505th15d01.dat` (0h17).
  
  <img src="plot_jpegs/plot0505th15d01.jpg"/>
  
- Allontanizmo il carrello di 12 cm (prima era a un centrimetro dall'iniziono della guida) e facciamo un'altra acquisizione: plot0505the15d13.dat (0h17).
+ Allontanizmo il carrello di 12 cm (prima era a un centrimetro dall'iniziono della guida) e facciamo un'altra acquisizione: `plot0505the15d13.dat` (0h17).
  
  <img src="plot_jpegs/plot0505th15d13.jpg"/>
  
- Stringiamo ancora i segnali in coincidenza entrambi a 152 ns, e faccimao partire l'acquisizione: plot0505th15d01_01.dat (0h17).
+ Stringiamo ancora i segnali in coincidenza entrambi a 152 ns, e faccimao partire l'acquisizione: `plot0505th15d01_01.dat` (0h17).
  
  <img src="plot_jpegs/plot0505th15d01_01.jpg"/>
  
- Facciamo due misure di calibrazione col sodio (plot0505calNa.dat) e col Cesio (plot0505calCs.dat).
+ Facciamo due misure di calibrazione col sodio (`plot0505calNa.dat`) e col Cesio (`plot0505calCs.dat`).
  
  <img scr="plot_jpegs/plot0505calNa.jpg"/>
  <img scr="plot_jpegs/plot0505calCs.jpg"/>
@@ -239,16 +239,16 @@ PMT1amp $\rightarrow$ Attenuatore $\rightarrow$ TENNELEC $\rightarrow$ CAEN N957
     | -------------------- | ----------------- | --------------- | ----------------------- | -------------------- | --------- | --------- |
     | 690                  | 10                | 0.700           | 5.5                     | 1789                 | -260.0 mV | -152.0 mV |
  
- Facciamo una presa dati dello spettro della sorgente all'interno della scatola: plot0510cal60Co.dat (30 secondi).
+ Facciamo una presa dati dello spettro della sorgente all'interno della scatola: `plot0510cal60Co.dat` (30 secondi).
  
  <img src="plot_jpegs/plot0510cal60Co.jpg"/>
  
- Con i segnali in coincidenza entrambi a 152 ns, e faccimao partire l'acquisizione col carrello a 13 cm dall'inizio della guida: plot0510th15d13T150.dat (0h17).
+ Con i segnali in coincidenza entrambi a 152 ns, e faccimao partire l'acquisizione col carrello a 13 cm dall'inizio della guida: `plot0510th15d13T150.dat` (0h17).
  
  <img src="plot_jpegs/plot0510the15d13T150.jpg"/>
  
  Facciamo le calibrazioni (16:30 cca):
- * cobalto plot0510calCo.dat (60 secondi)
+ * cobalto `plot0510calCo.dat` (60 secondi)
  <img scr="plot_jpegs/plot0510calco.jpg"/> ----- da FARE jpg e pdf
  * cesio plot0510calCs.dat (30 secondi)
  <img scr="plot_jpegs/plot0510calCs.jpg"/> ----- da FARE jpg e pdf
@@ -259,20 +259,20 @@ PMT1amp $\rightarrow$ Attenuatore $\rightarrow$ TENNELEC $\rightarrow$ CAEN N957
  
  <img scr="plot_jpegs/calLin0510in.jpg"/> ---------- da FARE
  
- Cobalto (quello dentro al "sarcofago") smorzato (21.5 cm sulla guida a 5 gradi) plot0510cal60Co_1.dat -> i picchi si spostano, allora c'è dipendenza dal rate (intensità) della sorgente.
+ Cobalto (quello dentro al "sarcofago") smorzato (21.5 cm sulla guida a 5 gradi) `plot0510cal60Co_1.dat` -> i picchi si spostano, allora c'è dipendenza dal rate (intensità) della sorgente.
  
  <img scr="plot_jpegs/plot0510cal60Co_1.jpg"/> ----- da FARE
  
- Con i segnali in coincidenza entrambi a 152 ns, e faccimao partire l'acquisizione col carrello a 13 cm dall'inizio della guida: plot0510th15d13T150_1.dat (1h13).
+ Con i segnali in coincidenza entrambi a 152 ns, e faccimao partire l'acquisizione col carrello a 13 cm dall'inizio della guida: `plot0510th15d13T150_1.dat` (1h13).
  
  <img scr="plot_jpegs/plot0510th15d13T150_1.jpg"/> ----- da FARE
  
  Facciamo un'altra calibrazione (18:36):
- * sodio plot0510calNa_1.dat (240 secondi)
+ * sodio `plot0510calNa_1.dat` (240 secondi)
  <img scr="plot_jpegs/plot0510calNa_1.jpg"/> ----- da FARE jpg
- * cesio plot0510calCs_1.dat (30 secondi)
+ * cesio `plot0510calCs_1.dat` (30 secondi)
  <img scr="plot_jpegs/plot0510calCs_1.jpg"/> ----- da FARE jpg
- * cobalto plot0510calCo_1.dat (60 secondi)
+ * cobalto `plot0510calCo_1.dat` (60 secondi)
  <img scr="plot_jpegs/plot0510calCo_1.jpg"/> ----- da FARE jpg
 
  Fit di calibrazione:
@@ -301,17 +301,17 @@ PMT1amp $\rightarrow$ Attenuatore $\rightarrow$ TENNELEC $\rightarrow$ CAEN N957
  
  <img scr="plot_jpegs/calLin0511in.jpg"/> ---------- da FARE
  
- Facciamo una presa dati a 22 gradi: plot0511th22d13T150.dat (1h32).
+ Facciamo una presa dati a 22 gradi: `plot0511th22d13T150.dat` (1h32).
  
  <img src="plot_jpegs/plot0511th22d13T150.jpg"/>
  
  Procedure finali:
  * calibrazione (12:30)
-    * sodio plot0511calNa_1.dat (124 secondi)
+    * sodio `plot0511calNa_1.dat` (124 secondi)
  <img scr="plot_jpegs/plot0511calNa_1.jpg"/> ----- da FARE jpg e pdf
-   * cesio plot0511calCs_1.dat (33 secondi)
+   * cesio `plot0511calCs_1.dat` (33 secondi)
  <img scr="plot_jpegs/plot0511calCs_1.jpg"/> ----- da FARE jpg e pdf
-   * cobalto plot0511calCo_1.dat (97 secondi) 
+   * cobalto `plot0511calCo_1.dat` (97 secondi) 
  <img scr="plot_jpegs/plot0511calCo_1.jpg"/> ----- da FARE jpg e pdf
  
  Fit di calibrazione:
@@ -319,7 +319,7 @@ PMT1amp $\rightarrow$ Attenuatore $\rightarrow$ TENNELEC $\rightarrow$ CAEN N957
  <img scr="plot_jpegs/calLin0511fin.jpg"/> ---------- da FARE
  
  ## 12 maggio
- Andiamo in laboratorio alle 9:00 per iniziare una presa dati: plot0512th22d13T150.dat (inizio 9:15-fine 16:40 = 26677.314 s)
+ Andiamo in laboratorio alle 9:00 per iniziare una presa dati: `plot0512th22d13T150.dat` (inizio 9:15-fine 16:40 = 26677.314 s)
  * punto di lavoro alle 9:15
   siamo tornati al multimetro iniziale (usato per misurare le tensioni di discriminazione)
     | V<sub>mon1</sub> [V] | coarse gain PMT1a | fine gain PMT1a | attenuazione [dB] PMT1a | V<sub>mon2</sub> [V] | V_th1b    | V_th2     |
@@ -341,7 +341,7 @@ PMT1amp $\rightarrow$ Attenuatore $\rightarrow$ TENNELEC $\rightarrow$ CAEN N957
    * cobalto plot0512calCo_0.dat ( 42 secondi) 
      <img scr="plot_jpegs/plot0512calCo_0.jpg"/> ----- da FARE
 
- Iniziamo una presa dati a 30 gradi: plot0512th30d13T150.dat (5057 s).
+ Iniziamo una presa dati a 30 gradi: `plot0512th30d13T150.dat` (5057 s).
  
  <img scr="plot_jpegs/plot0512th30d13T150.jpg"/> ----- da FARE
  
@@ -360,6 +360,14 @@ In entrambi i casi per trovare l'errore sulla moda si fa un [bootstrap](https://
      <img scr="plot_jpegs/plot0512calCo_1.jpg"/> ----- da FARE
 
 Eseguiamo e testiamo il bootstrap sui dati del 10 maggio per ottenere la moda dei vari picchi delle sorgenti di calibrazione. 
+* Dipendenza del _BOOTSTRAP_ dai vari parametri, analisi fatta su `plot0510calCs.dat`
+  * Variazione di `REP`: numero di ripetizioni del BS
+  <img src="plot_jpegs/calBS_spanRep.jpg"/>
+  * Variazione di `DRAW`: numero di elementi nel subsample
+  <img src="plot_jpegs/calBS_spanDraw.jpg"/>
+  * Variazione di `BIN`: numero di bin del subsample
+  <img src="plot_jpegs/calBS_spanBin.jpg"/>
+
 Compariamo i risultati del fit quadratico, ottenuto con un fit locale con una curva gaussiana e con il metodo di stima della moda prima descritto:
   |                         | $\chi^2$/ndf | _p-value_ | a            | b            | c           |
   | ----------------------- | ------------ | --------- | ------------ | ------------ | ----------- |
