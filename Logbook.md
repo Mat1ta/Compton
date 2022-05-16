@@ -249,7 +249,7 @@ PMT1amp $\rightarrow$ Attenuatore $\rightarrow$ TENNELEC $\rightarrow$ CAEN N957
  
  Facciamo le calibrazioni (16:30 cca):
  * cobalto `plot0510calCo.dat` (60 secondi)
- <img scr="plot_jpegs/plot0510calco.jpg"/> ----- da FARE jpg e pdf
+ <img scr="plot_jpegs/plot0510calCo.jpg"/> ----- da FARE jpg e pdf
  * cesio plot0510calCs.dat (30 secondi)
  <img scr="plot_jpegs/plot0510calCs.jpg"/> ----- da FARE jpg e pdf
  * sodio plot0510calNa.dat (240 secondi)
@@ -303,7 +303,7 @@ PMT1amp $\rightarrow$ Attenuatore $\rightarrow$ TENNELEC $\rightarrow$ CAEN N957
  
  Facciamo una presa dati a 22 gradi: `plot0511th22d13T150.dat` (1h32).
  
- <img src="plot_jpegs/plot0511th22d13T150.jpg"/>
+ <img src="plot_jpegs/plot0511th22d13T150.jpg"/>    
  
  Procedure finali:
  * calibrazione (12:30)
@@ -320,6 +320,9 @@ PMT1amp $\rightarrow$ Attenuatore $\rightarrow$ TENNELEC $\rightarrow$ CAEN N957
  
  ## 12 maggio
  Andiamo in laboratorio alle 9:00 per iniziare una presa dati: `plot0512th22d13T150.dat` (inizio 9:15-fine 16:40 = 26677.314 s)
+ 
+ <img scr="plot_jpegs/plot0512th22d13T150.jpg"/>
+ 
  * punto di lavoro alle 9:15
   siamo tornati al multimetro iniziale (usato per misurare le tensioni di discriminazione)
     | V<sub>mon1</sub> [V] | coarse gain PMT1a | fine gain PMT1a | attenuazione [dB] PMT1a | V<sub>mon2</sub> [V] | V_th1b    | V_th2     |
@@ -343,7 +346,7 @@ PMT1amp $\rightarrow$ Attenuatore $\rightarrow$ TENNELEC $\rightarrow$ CAEN N957
 
  Iniziamo una presa dati a 30 gradi: `plot0512th30d13T150.dat` (5057 s).
  
- <img scr="plot_jpegs/plot0512th30d13T150.jpg"/> ----- da FARE
+ <img scr="plot_jpegs/plot0512th30d13T150.jpg"/>
  
  Dato che le distribuzione in energia delle sorgenti di calibrazione non sono delle gaussiane, scegliamo di utilizzare un estimatore diverso dalla media: la moda. Parlando col professore ci si presentano due modi per il calcolo della moda:
  * binned, cercando il massimo di occorrenze nell'istogramma
