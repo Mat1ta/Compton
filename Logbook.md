@@ -159,12 +159,12 @@ PMT1amp $\rightarrow$ Attenuatore $\rightarrow$ TENNELEC $\rightarrow$ CAEN N957
  I dati di questo istogramma sono salvati sul file `plot0503cal60Co.dat` (trigger automatico).
  Il primo picco è 6457(192), il secondo è 7281(188).
  
- <img scr="plot_jpegs/plot0503cal60Co.jpg"/>
+ <img src="plot_jpegs/plot0503cal60Co.jpg"/>
  
  Facciamo una presa dati a 15 gradi col setup così fatto (gate quello della volta scorsa, con i segnali dei due PMT in coincidenza sono entrambi amplificati e il fine gain del cristalllo modificato come sopra): `plot0503th15_0.dat` e `plot0503th15_1.dat` (quest'ultimo comprende i dati del primo: è stata messa in "pausa" l'acquisizione).
  
- <img scr="plot_jpegs/plot0503th15.jpg"/> 
- <img scr="plot_jpegs/plot0503th15_1.jpg"/>
+ <img src="plot_jpegs/plot0503th15.jpg"/> 
+ <img src="plot_jpegs/plot0503th15_1.jpg"/>
  
 ## 4 maggio
  Misuro il diametro del cristallo col calibro: 5.860(5) cm.
@@ -178,16 +178,16 @@ PMT1amp $\rightarrow$ Attenuatore $\rightarrow$ TENNELEC $\rightarrow$ CAEN N957
     | 690                  | 10                | 0.700           | 5.5                     | 1788                 | -259.5 mV | -151.8 mV |
  * calibrazione
    * sodio: `plot0504calNa_0.dat`, `plot0504calNa_1.dat`
- <img scr="plot_jpegs/plot0504calNa_0.jpg"/> 
- <img scr="plot_jpegs/plot0504calNa_1.jpg"/> 
+ <img src="plot_jpegs/plot0504calNa_0.jpg"/> 
+ <img src="plot_jpegs/plot0504calNa_1.jpg"/> 
    * cesio: `plot0504calCs.dat`
- <img scr="plot_jpegs/plot0504calCs.jpg"/> ----- da FARE jpg e pdf
+ <img src="plot_jpegs/plot0504calCs.jpg"/> ----- da FARE jpg e pdf
  
  Si osserva che se la scatola con le sorgenti non viene schermata dal Pb, il picco del Cesio si vede sempre, in quanto la scatola non è sufficiente a schermarne i fotoni.
  
  Iniziamo una presa dati a 15 gradi: `plot0504th15.dat` (1h55). 
 
- <img scr="plot_jpegs/plot0504th15.jpg"/> 
+ <img src="plot_jpegs/plot0504th15.jpg"/> 
  
  Nel frattenpo si fa un'analisi approssimativa dei dati di calibrazione:
  * sodio due picchi : 6381(187) e 2637(96) (Na)
@@ -196,7 +196,7 @@ PMT1amp $\rightarrow$ Attenuatore $\rightarrow$ TENNELEC $\rightarrow$ CAEN N957
  
  Fit di calibrazione:
  
- <img scr="plot_jpegs/calLin0504.jpg"/> ---------- da FARE
+ <img src="plot_jpegs/calLin0504.jpg"/> ---------- da FARE
  
  ## 5 maggio
 
@@ -223,12 +223,12 @@ PMT1amp $\rightarrow$ Attenuatore $\rightarrow$ TENNELEC $\rightarrow$ CAEN N957
  
  Facciamo due misure di calibrazione col sodio (`plot0505calNa.dat`) e col Cesio (`plot0505calCs.dat`).
  
- <img scr="plot_jpegs/plot0505calNa.jpg"/>
- <img scr="plot_jpegs/plot0505calCs.jpg"/>
+ <img src="plot_jpegs/plot0505calNa.jpg"/>
+ <img src="plot_jpegs/plot0505calCs.jpg"/>
  
  Fit di calibrazione:
  
- <img scr="plot_jpegs/calLin0505.jpg"/> ---------- da FARE
+ <img src="plot_jpegs/calLin0505.jpg"/> ---------- da FARE
  
  ## 10 maggio
  
@@ -243,41 +243,39 @@ PMT1amp $\rightarrow$ Attenuatore $\rightarrow$ TENNELEC $\rightarrow$ CAEN N957
  
  <img src="plot_jpegs/plot0510cal60Co.jpg"/>
  
+  Avendo osservato che i picchi non coincidono con la sorgente di cobalto nella scatola a disposizione si fa un'acquisizione del Cobalto (quello dentro al "sarcofago") smorzato (21.5 cm sulla guida a 5 gradi) `plot0510cal60Co_1.dat` -> i picchi si spostano, allora c'è dipendenza dal rate (intensità) della sorgente.
+ 
+ <img src="plot_jpegs/plot0510cal60Co_1.jpg"/>
+ 
  Con i segnali in coincidenza entrambi a 152 ns, e faccimao partire l'acquisizione col carrello a 13 cm dall'inizio della guida: `plot0510th15d13T150.dat` (0h17).
  
  <img src="plot_jpegs/plot0510the15d13T150.jpg"/>
  
  Facciamo le calibrazioni (16:30 cca):
  * cobalto `plot0510calCo.dat` (60 secondi)
- <img scr="plot_jpegs/plot0510calCo.jpg"/> ----- da FARE jpg e pdf
+ <img src="plot_jpegs/plot0510calCo.jpg"/> ----- da FARE jpg e pdf
  * cesio plot0510calCs.dat (30 secondi)
- <img scr="plot_jpegs/plot0510calCs.jpg"/> ----- da FARE jpg e pdf
+ <img src="plot_jpegs/plot0510calCs.jpg"/> ----- da FARE jpg e pdf
  * sodio plot0510calNa.dat (240 secondi)
- <img scr="plot_jpegs/plot0510calNa.jpg"/> ----- da FARE jpg e pdf
+ <img src="plot_jpegs/plot0510calNa.jpg"/> ----- da FARE jpg e pdf
  
- Fit di calibrazione:
- 
- <img scr="plot_jpegs/calLin0510in.jpg"/> ---------- da FARE
- 
- Cobalto (quello dentro al "sarcofago") smorzato (21.5 cm sulla guida a 5 gradi) `plot0510cal60Co_1.dat` -> i picchi si spostano, allora c'è dipendenza dal rate (intensità) della sorgente.
- 
- <img scr="plot_jpegs/plot0510cal60Co_1.jpg"/> ----- da FARE
+
  
  Con i segnali in coincidenza entrambi a 152 ns, e faccimao partire l'acquisizione col carrello a 13 cm dall'inizio della guida: `plot0510th15d13T150_1.dat` (1h13).
  
- <img scr="plot_jpegs/plot0510th15d13T150_1.jpg"/> ----- da FARE
+ <img src="plot_jpegs/plot0510th15d13T150_1.jpg"/> ----- da FARE
  
  Facciamo un'altra calibrazione (18:36):
  * sodio `plot0510calNa_1.dat` (240 secondi)
- <img scr="plot_jpegs/plot0510calNa_1.jpg"/> ----- da FARE jpg
+ <img src="plot_jpegs/plot0510calNa_1.jpg"/> ----- da FARE jpg
  * cesio `plot0510calCs_1.dat` (30 secondi)
- <img scr="plot_jpegs/plot0510calCs_1.jpg"/> ----- da FARE jpg
+ <img src="plot_jpegs/plot0510calCs_1.jpg"/> ----- da FARE jpg
  * cobalto `plot0510calCo_1.dat` (60 secondi)
- <img scr="plot_jpegs/plot0510calCo_1.jpg"/> ----- da FARE jpg
+ <img src="plot_jpegs/plot0510calCo_1.jpg"/> ----- da FARE jpg
 
  Fit di calibrazione:
  
- <img scr="plot_jpegs/calLin0510fin.jpg"/> ---------- da FARE
+ <img src="plot_jpegs/calLin0510fin.jpg"/> ---------- da FARE
  
  ## 11 maggio
  
@@ -291,15 +289,15 @@ PMT1amp $\rightarrow$ Attenuatore $\rightarrow$ TENNELEC $\rightarrow$ CAEN N957
     | 694                  | 10                | 0.700           | 5.5                     | 1789                 | -301.9 mV | -152.2 mV |
  * calibrazione (10:48):
    * sodio plot0511calNa.dat (240 secondi)
- <img scr="plot_jpegs/plot0511calNa.jpg"/> ----- da FARE jpg e pdf
+ <img src="plot_jpegs/plot0511calNa.jpg"/> ----- da FARE jpg e pdf
    * cesio plot0511calCs.dat (30 secondi)
- <img scr="plot_jpegs/plot0511calCs.jpg"/> ----- da FARE jpg e pdf
+ <img src="plot_jpegs/plot0511calCs.jpg"/> ----- da FARE jpg e pdf
    * cobalto plot0511calCo.dat (70 secondi) 
- <img scr="plot_jpegs/plot0511calCo.jpg"/> ----- da FARE jpg e pdf
+ <img src="plot_jpegs/plot0511calCo.jpg"/> ----- da FARE jpg e pdf
  
  Fit di calibrazione:
  
- <img scr="plot_jpegs/calLin0511in.jpg"/> ---------- da FARE
+ <img src="plot_jpegs/calLin0511in.jpg"/> ---------- da FARE
  
  Facciamo una presa dati a 22 gradi: `plot0511th22d13T150.dat` (1h32).
  
@@ -308,20 +306,20 @@ PMT1amp $\rightarrow$ Attenuatore $\rightarrow$ TENNELEC $\rightarrow$ CAEN N957
  Procedure finali:
  * calibrazione (12:30)
     * sodio `plot0511calNa_1.dat` (124 secondi)
- <img scr="plot_jpegs/plot0511calNa_1.jpg"/> ----- da FARE jpg e pdf
+ <img src="plot_jpegs/plot0511calNa_1.jpg"/> ----- da FARE jpg e pdf
    * cesio `plot0511calCs_1.dat` (33 secondi)
- <img scr="plot_jpegs/plot0511calCs_1.jpg"/> ----- da FARE jpg e pdf
+ <img src="plot_jpegs/plot0511calCs_1.jpg"/> ----- da FARE jpg e pdf
    * cobalto `plot0511calCo_1.dat` (97 secondi) 
- <img scr="plot_jpegs/plot0511calCo_1.jpg"/> ----- da FARE jpg e pdf
+ <img src="plot_jpegs/plot0511calCo_1.jpg"/> ----- da FARE jpg e pdf
  
  Fit di calibrazione:
  
- <img scr="plot_jpegs/calLin0511fin.jpg"/> ---------- da FARE
+ <img src="plot_jpegs/calLin0511fin.jpg"/> ---------- da FARE
  
  ## 12 maggio
  Andiamo in laboratorio alle 9:00 per iniziare una presa dati: `plot0512th22d13T150.dat` (inizio 9:15-fine 16:40 = 26677.314 s)
  
- <img scr="plot_jpegs/plot0512th22d13T150.jpg"/>
+ <img src="plot_jpegs/plot0512th22d13T150.jpg"/>
  
  * punto di lavoro alle 9:15
   siamo tornati al multimetro iniziale (usato per misurare le tensioni di discriminazione)
@@ -338,15 +336,15 @@ PMT1amp $\rightarrow$ Attenuatore $\rightarrow$ TENNELEC $\rightarrow$ CAEN N957
     | 694                  | 10                | 0.700           | 5.5                     | 1792                 | -302.7 mV | -152.2 mV |
  * calibrazione (16:46, il cobalto è stato usato invece alle 16:58 perche' occupato da altri):
    * sodio plot0512calNa_0.dat ( 175 secondi)
-     <img scr="plot_jpegs/plot0512calNa_0.jpg"/> 
+     <img src="plot_jpegs/plot0512calNa_0.jpg"/> 
    * cesio plot0512calCs_0.dat ( 37 secondi)
-     <img scr="plot_jpegs/plot0512calCs_0.jpg"/> 
+     <img src="plot_jpegs/plot0512calCs_0.jpg"/> 
    * cobalto plot0512calCo_0.dat ( 42 secondi) 
-     <img scr="plot_jpegs/plot0512calCo_0.jpg"/>
+     <img src="plot_jpegs/plot0512calCo_0.jpg"/>
 
  Iniziamo una presa dati a 30 gradi: `plot0512th30d13T150.dat` (5057 s).
  
- <img scr="plot_jpegs/plot0512th30d13T150.jpg"/>
+ <img src="plot_jpegs/plot0512th30d13T150.jpg"/>
  
  Dato che le distribuzione in energia delle sorgenti di calibrazione non sono delle gaussiane, scegliamo di utilizzare un estimatore diverso dalla media: la moda. Parlando col professore ci si presentano due modi per il calcolo della moda:
  * binned, cercando il massimo di occorrenze nell'istogramma
@@ -356,11 +354,11 @@ In entrambi i casi per trovare l'errore sulla moda si fa un [bootstrap](https://
  
  * Calibrazione finale (18:45):
    * sodio plot0512calNa_1.dat ( 39 secondi)
-     <img scr="plot_jpegs/plot0512calNa_1.jpg"/> 
+     <img src="plot_jpegs/plot0512calNa_1.jpg"/> 
    * cesio plot0512calCs_1.dat ( 20 secondi)
-     <img scr="plot_jpegs/plot0512calCs_1.jpg"/>
+     <img src="plot_jpegs/plot0512calCs_1.jpg"/>
    * cobalto plot0512calCo_1.dat ( 40 secondi) 
-     <img scr="plot_jpegs/plot0512calCo_1.jpg"/>
+     <img src="plot_jpegs/plot0512calCo_1.jpg"/>
 
 Eseguiamo e testiamo il bootstrap sui dati del 10 maggio per ottenere la moda dei vari picchi delle sorgenti di calibrazione. 
 * Dipendenza del _BOOTSTRAP_ dai vari parametri, analisi fatta su `plot0510calCs.dat`
