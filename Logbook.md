@@ -379,3 +379,25 @@ Compariamo i risultati del fit quadratico, ottenuto con un fit locale con una cu
   | local _Gaussian_-fit    | $2.1/2$      | $0.35$    | $-368\pm20$  | $5783\pm37$  | $-90\pm15$  |
   | _BOOTSTRAP_ mode        | $0.15/2$     | $0.93$    | $-250\pm293$ | $5551\pm540$ | $-13\pm214$ |
   | _BOOTSTRAP_ mode (a==0) | $0.87/3$     | $0.83$    | $0$          | $5092\pm41$  | $192\pm38$  |
+ 
+ 
+ ## 17 maggio
+ 
+ Andiamo in laboratorio alle 9:00 per fare un'aquisizione a 30 gradi: plot [...]
+ 
+ Vogliamo avere una stima della massa dell'elettrone a partire dall'acquisizione del 12 maggio a 22 gradi. Facendo una calibrazione attraverso la moda come spiegato in precedenza.
+ Usiamo gli spettri di calibrazioni fatti alle 16:50, con i seguenti risultati:
+ * m = 5010 pm 36
+ * q = 180 pm 33
+ 
+ Le energie dei fotoni scatterate per i due picchi sono in unità arbitrarie:
+ * 5250 pm 52
+ * 5740 pm 54
+ 
+ Per una stima primaria, usiamo la formula inversa dell'equazone dell'effetto compton si trovano i seguenti valori per la massa dell'elettrone:
+ * m = 0.55 pm 0.15
+ * m = 0.49 pm 0.11
+ 
+ Gli errori percentuali sono (per i due picchi):
+* energia della particella scatterata  10.3%, 6.9% 
+* errore dell'angolo  4.9%, 4.4%
