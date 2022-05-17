@@ -382,9 +382,15 @@ Compariamo i risultati del fit quadratico, ottenuto con un fit locale con una cu
  
  
  ## 17 maggio
+ ### laboratorio
+ Andiamo in laboratorio alle 9:00 per fare un'aquisizione a 30 gradi: `plotth30d13T150.dat` (17:22-9:15= h =29192 s)
  
- Andiamo in laboratorio alle 9:00 per fare un'aquisizione a 30 gradi: plot [...]
+ | V<sub>mon1</sub> [V] | coarse gain PMT1a | fine gain PMT1a | attenuazione [dB] PMT1a | V<sub>mon2</sub> [V] | V_th1b    | V_th2     |
+ | -------------------- | ----------------- | --------------- | ----------------------- | -------------------- | --------- | --------- |
+ | 694                  | 10                | 0.700           | 5.5                     | 1795                 | -302.1 mV | -151.3 mV |
+
  
+ ### Breafing:
  Vogliamo avere una stima della massa dell'elettrone a partire dall'acquisizione del 12 maggio a 22 gradi. Facendo una calibrazione attraverso la moda come spiegato in precedenza.
  Usiamo gli spettri di calibrazioni fatti alle 16:50, con i seguenti risultati:
  * m = 5010 pm 36
@@ -399,5 +405,33 @@ Compariamo i risultati del fit quadratico, ottenuto con un fit locale con una cu
  * m = 0.49 pm 0.11
  
  Gli errori percentuali sono (per i due picchi):
-* energia della particella scatterata  10.3%, 6.9% 
+* energia della particella scatterata  10.3%, 6.9%  -> controllare script sono sbagliati
 * errore dell'angolo  4.9%, 4.4%
+ 
+ 
+ 
+ ### di nuovo in laboratorio:
+ 
+ * Punto di lavoro (16:22):
+ | V<sub>mon1</sub> [V] | coarse gain PMT1a | fine gain PMT1a | attenuazione [dB] PMT1a | V<sub>mon2</sub> [V] | V_th1b    | V_th2     |
+ | -------------------- | ----------------- | --------------- | ----------------------- | -------------------- | --------- | --------- |
+ | 694                  | 10                | 0.700           | 5.5                     | 1799                 | -303.1 mV | -152.9 mV |
+
+ * Calibrazioni (17:30):
+   * sodio plot0517calNa_0.dat ( 146 secondi)
+ <img src="plot_jpegs/plot0512calNa_0.jpg"/>
+   * cesio plot0517calCs_0.dat ( 27 secondi)
+ <img src="plot_jpegs/plot0512calCs_0.jpg"/>
+   * cobalto plot0517calCo_0.dat ( 49 secondi) 
+  <img src="plot_jpegs/plot0512calCo_0.jpg"/>
+ 
+ 
+ * Acquisizione a 10 gradi: plot0517th10d13T150.dat (0h57 = 3429 s)
+ 
+ * Calibrazione (18:40)
+   * sodio plot0517calNa_1.dat ( 95 secondi)
+ <img src="plot_jpegs/plot0512calNa_1.jpg"/>
+   * cesio plot0517calCs_1.dat ( 48 secondi)
+ <img src="plot_jpegs/plot0512calCs_1.jpg"/>
+   * cobalto plot0517calCo_1.dat ( 79 secondi) 
+  <img src="plot_jpegs/plot0512calCo_1.jpg"/>
