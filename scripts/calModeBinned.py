@@ -13,12 +13,9 @@ DRAW = int(2e3) # Number of draws in the sample
 REP = int(3e3) # Number of repetitions
 BIN = 100 # Bins in temp histogram
 
-if __name__ == '__main__':
-    
-    fname = '../dati/plot0510calNa.dat'
-    arr = np.array([int(hexa, base=16) for hexa in np.genfromtxt(fname, dtype='str')])
-    mask1 = arr > 2000
-    mask2 = arr < 4000
+def BSfunc(arr, min, max):
+    mask1 = arr > min
+    mask2 = arr < max
     arr = arr[mask1 & mask2]
 
     mode = np.zeros(REP)
@@ -28,12 +25,21 @@ if __name__ == '__main__':
         hist, bins = np.histogram(temp, BIN)
         mode[i] = (bins[np.argmax(hist)+1] + bins[np.argmax(hist)]) / 2
 
-    opt = 0 # 0 to simple print the result, 1 to plot histogram (remember to adjust parameters in histogram)    
-    if opt == 0:
-        print(f'MODE = {np.mean(mode):.0f} +/- {np.std(mode):.0f}')
-    elif opt == 1:
-        c1 = TCanvas("c1", "c1", 1)
-        h1 = TH1F("h1", "h1", 30, 3400, 3700)
-        for val in mode:
-            h1.Fill(val)
-        h1.Draw()
+    print(f'MODE = {np.mean(mode):.0f} +/- {np.std(mode):.0f}')  
+    return
+
+if __name__ == '__main__':
+    
+    fname = '../dati/plot0512calCo_1.dat'
+    print(fname[8:])
+    arr = np.array([int(hexa, base=16) for hexa in np.genfromtxt(fname, dtype='str')])
+    
+    if fname[19:21] == 'Na':
+        BSfunc(arr, 2000, 4000)
+        BSfunc(arr, 5800, 7400)
+    elif fname[19:21] == 'Cs':
+        BSfunc(arr, 2000, 5000)
+    elif fname[19:21] == 'Co':
+        BSfunc(arr, 5500, 6400)
+        BSfunc(arr, 6400, 7500)
+    else: print('Warning: source not found')
