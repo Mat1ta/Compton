@@ -336,9 +336,11 @@ PMT1amp $\rightarrow$ Attenuatore $\rightarrow$ TENNELEC $\rightarrow$ CAEN N957
     | 694                  | 10                | 0.700           | 5.5                     | 1792                 | -302.7 mV | -152.2 mV |
  * calibrazione (16:46, il cobalto è stato usato invece alle 16:58 perche' occupato da altri):
    * sodio plot0512calNa_0.dat ( 175 secondi)
-
+  <img src="plot_jpegs/plot0512calNa_0.jpg"/>
    * cesio plot0512calCs_0.dat ( 37 secondi)
+   <img src="plot_jpegs/plot0512calCs_0.jpg"/>
    * cobalto plot0512calCo_0.dat ( 42 secondi) 
+  <img src="plot_jpegs/plot0512calCo_0.jpg"/>
 
  Iniziamo una presa dati a 30 gradi: `plot0512th30d13T150.dat` (5057 s).
  
@@ -352,12 +354,15 @@ In entrambi i casi per trovare l'errore sulla moda si fa un [bootstrap](https://
  
  * Calibrazione finale (18:45):
    * sodio plot0512calNa_1.dat ( 39 secondi)
+ <img src="plot_jpegs/plot0512calNa_1.jpg"/>
+ 
    * cesio plot0512calCs_1.dat ( 20 secondi)
+ <img src="plot_jpegs/plot0512calCs_1.jpg"/>
+
    * cobalto plot0512calCo_1.dat ( 40 secondi) 
- Istogrammi spettri di calibrazione:
- <img src="plot_jpegs/plot0512calNa.jpg"/>
- <img src="plot_jpegs/plot0512calCo.jpg"/>
- <img src="plot_jpegs/plot0512calCs.jpg"/>
+  <img src="plot_jpegs/plot0512calCo_1.jpg"/>
+
+ 
 
 Eseguiamo e testiamo il bootstrap sui dati del 10 maggio per ottenere la moda dei vari picchi delle sorgenti di calibrazione. 
 * Dipendenza del _BOOTSTRAP_ dai vari parametri, analisi fatta su `plot0510calCs.dat`
