@@ -32,7 +32,8 @@ TPaveText * drawInfos(){
     infos->SetTextFont(42);
     infos->SetTextSizePixels(22);
     infos->SetFillColorAlpha(0,0.0);
-    infos->AddText("Plot 06/05/22");
+    infos->AddText("Final calibration: 12th of may 2022");
+    infos->AddText("Plot 17/05/22");
     infos->Draw();
     return infos; 
 }
@@ -55,11 +56,11 @@ Double_t ffunc(Double_t * x, Double_t * p){
 }
 
 void getSources(Double_t * vNa, Double_t * vCs, Double_t * vCo, Double_t * eNa, Double_t * eCs, Double_t * eCo){
-    std::string name = "calStart.txt";
+    std::string name = "calStop.txt";
     std::ifstream fin("../dati/" + name);
     std::string line, lline;
     int i = 0;
-    Double_t v[5][11];
+    Double_t v[5][11]; // v[# rows][# columns] in file
     while(std::getline(fin, line)){
         lline = line[0];
         if (lline != "#"){
@@ -75,7 +76,7 @@ void getSources(Double_t * vNa, Double_t * vCs, Double_t * vCo, Double_t * eNa, 
         }
     }
     i = 0;
-    Double_t date = 220610; // Select which calibration you want, format = yymmdd
+    Double_t date = 220512; // Select which calibration you want, format = yymmdd
     while (v[i][0] != date){
         i++;
     }
@@ -107,6 +108,7 @@ void calLin(){
     TCanvas * c1 = new TCanvas("c1", "c1", 1);
     TF1 * func = new TF1("func", ffunc, 0, 8000, 3); 
     func->SetParNames("a", "b", "c");
+    func->FixParameter(0, 0);
     TGraphErrors * plotNa = new TGraphErrors(2, eVNa_val, binNa_val, eV_err, binNa_err);
     TGraphErrors * plotCs = new TGraphErrors(1, eVCs_val, binCs_val, eV_err, binCs_err);
     TGraphErrors * plotCo = new TGraphErrors(2, eVCo_val, binCo_val, eV_err, binCo_err);
