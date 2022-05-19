@@ -474,3 +474,35 @@ Compariamo i risultati del fit quadratico, ottenuto con un fit locale con una cu
    * cesio `plot0518calCs_3.dat` ( 31 secondi)
    * cobalto `plot0518calCo_3.dat` ( 62 secondi) 
  
+## 19 maggio
+ ### In laboratorio (10:00)
+ 
+ * Acquisizione a 15 gradi e distanza 23 cm dall'inizio della guida: `plot0519th15d22T150.dat` (27928 s)
+ 
+ * Punto di lavoro
+ | V<sub>mon1</sub> [V] | coarse gain PMT1a | fine gain PMT1a | attenuazione [dB] PMT1a | V<sub>mon2</sub> [V] | V_th1b    | V_th2     |
+ | -------------------- | ----------------- | --------------- | ----------------------- | -------------------- | --------- | --------- |
+ | 692                  | 10                | 0.700           | 5.5                     | 1789                 | -302.0 mV | -152.0 mV |
+ 
+ ### In laboratorio (16:30)
+ 
+ Fermiamo l'acquisizione iniziata la mattina
+ 
+ * Punto di lavoro (17:35)
+ | V<sub>mon1</sub> [V] | coarse gain PMT1a | fine gain PMT1a | attenuazione [dB] PMT1a | V<sub>mon2</sub> [V] | V_th1b    | V_th2     |
+ | -------------------- | ----------------- | --------------- | ----------------------- | -------------------- | --------- | --------- |
+ | 692                  | 10                | 0.700           | 5.5                     | 1793                 | -303.3 mV | -153.4 mV |
+ 
+ * Calibrazioni (17:40)
+   * sodio `plot0519calNa_0.dat` ( 619 secondi)
+   * cesio `plot0519calCs_0.dat` ( 27 secondi)
+   * cobalto `plot0519calCo_0.dat` ( 409 secondi) 
+ 
+ * Acquisizione 18 gradi, distanza 22 cm dall'inizio della guida: `plot0519th18d22T150.dat` ( 2329 secondi)
+ 
+ * Calibrazioni (17:40)
+   * sodio `plot0519calNa_1.dat` ( 138 secondi)
+   * cesio `plot0519calCs_1.dat` ( 34 secondi)
+   * cobalto `plot0519calCo_1.dat` ( 74 secondi) 
+ 
+
