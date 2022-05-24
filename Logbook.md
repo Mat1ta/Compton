@@ -526,9 +526,9 @@ Compariamo i risultati del fit quadratico, ottenuto con un fit locale con una cu
    * cesio `plot0524calCs_0.dat` ( 43 secondi)
    * cobalto `plot0524calCo_0.dat` ( 67 secondi)
 
- * Acquisizione a 22 gradi, tacchetta 22: `plot0524th22d22T150.dat` ( secondi)
+ * Acquisizione a 22 gradi, tacchetta 22: `plot0524th22d22T150.dat` (7001 secondi)
  
  * Calibrazione (18:40)
-   * sodio `plot0524calNa_1.dat` (  secondi)
-   * cesio `plot0524calCs_1.dat` (  secondi)
-   * cobalto `plot0524calCo_1.dat` (  secondi)
+   * sodio `plot0524calNa_1.dat` ( 52 secondi)
+   * cesio `plot0524calCs_1.dat` ( 19 secondi)
+   * cobalto `plot0524calCo_1.dat` ( 30 secondi)
