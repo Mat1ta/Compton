@@ -28,7 +28,7 @@ Andiamo a vedere che energie legge il PMT1a in diverse configurazioni: cambiando
 Prendiamo il segnale PMT1a, lo inviamo all'attenuatore passivo con una attenuazione di 20 dB, il segnale attenuato passa dal TENNELEC che aggiusta la forma d'onda in modo tale che sia compatibile con il modulo ADC CAEN, che misura l'energia dell'evento.
 L'attenuatore serve perchè il segnale satura nel TENNELEC per tensioni superiori a 4.84 V (cursori)
 
-| V<sub>mon1</sub> [V] | V<sub>THR</sub> [mV] | D [cm] | name_file.dat |
+| V<sub>mon1</sub> [V] | V<sub>THR</sub> [mV] | D [cm] | name_file     |
 | -------------------- | -------------------- | ------ | ------------- |
 | 670                  | -68.3                |        |               |
 
@@ -253,11 +253,11 @@ PMT1amp $\rightarrow$ Attenuatore $\rightarrow$ TENNELEC $\rightarrow$ CAEN N957
  
  Facciamo le calibrazioni (16:30 cca):
  * cobalto `plot0510calCo.dat` (60 secondi)
- <img src="plot_jpegs/plot0510calCo.jpg"/> ----- da FARE jpg e pdf
- * cesio plot0510calCs.dat (30 secondi)
- <img src="plot_jpegs/plot0510calCs.jpg"/> ----- da FARE jpg e pdf
- * sodio plot0510calNa.dat (240 secondi)
- <img src="plot_jpegs/plot0510calNa.jpg"/> ----- da FARE jpg e pdf
+ <img src="plot_jpegs/plot0510calCo.jpg"/>
+ * cesio `plot0510calCs.dat` (30 secondi)
+ <img src="plot_jpegs/plot0510calCs.jpg"/>
+ * sodio `plot0510calNa.dat` (240 secondi)
+ <img src="plot_jpegs/plot0510calNa.jpg"/>
  
 
  
@@ -288,11 +288,11 @@ PMT1amp $\rightarrow$ Attenuatore $\rightarrow$ TENNELEC $\rightarrow$ CAEN N957
     | -------------------- | ----------------- | --------------- | ----------------------- | -------------------- | --------- | --------- |
     | 694                  | 10                | 0.700           | 5.5                     | 1789                 | -301.9 mV | -152.2 mV |
  * calibrazione (10:48):
-   * sodio plot0511calNa.dat (240 secondi)
+   * sodio `plot0511calNa.dat` (240 secondi)
  <img src="plot_jpegs/plot0511calNa.jpg"/> ----- da FARE jpg e pdf
-   * cesio plot0511calCs.dat (30 secondi)
+   * cesio `plot0511calCs.dat` (30 secondi)
  <img src="plot_jpegs/plot0511calCs.jpg"/> ----- da FARE jpg e pdf
-   * cobalto plot0511calCo.dat (70 secondi) 
+   * cobalto `plot0511calCo.dat` (70 secondi) 
  <img src="plot_jpegs/plot0511calCo.jpg"/> ----- da FARE jpg e pdf
  
  Fit di calibrazione:
@@ -306,11 +306,11 @@ PMT1amp $\rightarrow$ Attenuatore $\rightarrow$ TENNELEC $\rightarrow$ CAEN N957
  Procedure finali:
  * calibrazione (12:30)
     * sodio `plot0511calNa_1.dat` (124 secondi)
- <img src="plot_jpegs/plot0511calNa_1.jpg"/> ----- da FARE jpg e pdf
+ <img src="plot_jpegs/plot0511calNa_1.jpg"/>
    * cesio `plot0511calCs_1.dat` (33 secondi)
- <img src="plot_jpegs/plot0511calCs_1.jpg"/> ----- da FARE jpg e pdf
+ <img src="plot_jpegs/plot0511calCs_1.jpg"/>
    * cobalto `plot0511calCo_1.dat` (97 secondi) 
- <img src="plot_jpegs/plot0511calCo_1.jpg"/> ----- da FARE jpg e pdf
+ <img src="plot_jpegs/plot0511calCo_1.jpg"/>
  
  Fit di calibrazione:
  
@@ -334,12 +334,13 @@ PMT1amp $\rightarrow$ Attenuatore $\rightarrow$ TENNELEC $\rightarrow$ CAEN N957
     | V<sub>mon1</sub> [V] | coarse gain PMT1a | fine gain PMT1a | attenuazione [dB] PMT1a | V<sub>mon2</sub> [V] | V_th1b    | V_th2     |
     | -------------------- | ----------------- | --------------- | ----------------------- | -------------------- | --------- | --------- |
     | 694                  | 10                | 0.700           | 5.5                     | 1792                 | -302.7 mV | -152.2 mV |
+ 
  * calibrazione (16:46, il cobalto è stato usato invece alle 16:58 perche' occupato da altri):
-   * sodio plot0512calNa_0.dat ( 175 secondi)
+   * sodio `plot0512calNa_0.dat` ( 175 secondi)
   <img src="plot_jpegs/plot0512calNa_0.jpg"/>
-   * cesio plot0512calCs_0.dat ( 37 secondi)
+   * cesio `plot0512calCs_0.dat` ( 37 secondi)
    <img src="plot_jpegs/plot0512calCs_0.jpg"/>
-   * cobalto plot0512calCo_0.dat ( 42 secondi) 
+   * cobalto `plot0512calCo_0.dat` ( 42 secondi) 
   <img src="plot_jpegs/plot0512calCo_0.jpg"/>
 
  Iniziamo una presa dati a 30 gradi: `plot0512th30d13T150.dat` (5057 s).
@@ -353,13 +354,13 @@ PMT1amp $\rightarrow$ Attenuatore $\rightarrow$ TENNELEC $\rightarrow$ CAEN N957
 In entrambi i casi per trovare l'errore sulla moda si fa un [bootstrap](https://en.wikipedia.org/wiki/Bootstrapping_(statistics)).
  
  * Calibrazione finale (18:45):
-   * sodio plot0512calNa_1.dat ( 39 secondi)
+   * sodio `plot0512calNa_1.dat` ( 39 secondi)
  <img src="plot_jpegs/plot0512calNa_1.jpg"/>
  
-   * cesio plot0512calCs_1.dat ( 20 secondi)
+   * cesio `plot0512calCs_1.dat` ( 20 secondi)
  <img src="plot_jpegs/plot0512calCs_1.jpg"/>
 
-   * cobalto plot0512calCo_1.dat ( 40 secondi) 
+   * cobalto `plot0512calCo_1.dat` ( 40 secondi) 
   <img src="plot_jpegs/plot0512calCo_1.jpg"/>
 
  
@@ -382,9 +383,15 @@ Compariamo i risultati del fit quadratico, ottenuto con un fit locale con una cu
  
  
  ## 17 maggio
+ ### laboratorio
+ Andiamo in laboratorio alle 9:00 per fare un'aquisizione a 30 gradi: `plotth30d13T150.dat` (17:22-9:15= h =29192 s)
  
- Andiamo in laboratorio alle 9:00 per fare un'aquisizione a 30 gradi: plot [...]
+ | V<sub>mon1</sub> [V] | coarse gain PMT1a | fine gain PMT1a | attenuazione [dB] PMT1a | V<sub>mon2</sub> [V] | V_th1b    | V_th2     |
+ | -------------------- | ----------------- | --------------- | ----------------------- | -------------------- | --------- | --------- |
+ | 694                  | 10                | 0.700           | 5.5                     | 1795                 | -302.1 mV | -151.3 mV |
+
  
+ ### Breafing:
  Vogliamo avere una stima della massa dell'elettrone a partire dall'acquisizione del 12 maggio a 22 gradi. Facendo una calibrazione attraverso la moda come spiegato in precedenza.
  Usiamo gli spettri di calibrazioni fatti alle 16:50, con i seguenti risultati:
  * m = 5010 pm 36
@@ -399,8 +406,129 @@ Compariamo i risultati del fit quadratico, ottenuto con un fit locale con una cu
  * m = 0.49 pm 0.11
  
  Gli errori percentuali sono (per i due picchi):
-* energia della particella scatterata  10.3%, 6.9% 
+* energia della particella scatterata  10.3%, 6.9%  -> controllare script sono sbagliati
 * errore dell'angolo  4.9%, 4.4%
 
-<img src="plot_jpegs/fitcal12_0.jpg"/>
-<img src="plot_jpegs/fitcal12_1.jpg"/>
+ ### di nuovo in laboratorio:
+ 
+ * Punto di lavoro (16:22):
+ | V<sub>mon1</sub> [V] | coarse gain PMT1a | fine gain PMT1a | attenuazione [dB] PMT1a | V<sub>mon2</sub> [V] | V_th1b    | V_th2     |
+ | -------------------- | ----------------- | --------------- | ----------------------- | -------------------- | --------- | --------- |
+ | 694                  | 10                | 0.700           | 5.5                     | 1799                 | -303.1 mV | -152.9 mV |
+
+ * Calibrazioni (17:30):
+   * sodio `plot0517calNa_0.dat` ( 146 secondi)
+ <img src="plot_jpegs/plot0512calNa_0.jpg"/>
+   * cesio `plot0517calCs_0.dat` ( 27 secondi)
+ <img src="plot_jpegs/plot0512calCs_0.jpg"/>
+   * cobalto `plot0517calCo_0.dat` ( 49 secondi) 
+  <img src="plot_jpegs/plot0512calCo_0.jpg"/>
+ 
+ 
+ * Acquisizione a 10 gradi: `plot0517th10d13T150.dat` (0h57 = 3429 s)
+ 
+ * Calibrazione (18:40)
+   * sodio `plot0517calNa_1.dat` ( 95 secondi)
+ <img src="plot_jpegs/plot0517calNa_1.jpg"/>
+   * cesio `plot0517calCs_1.dat` ( 48 secondi)
+ <img src="plot_jpegs/plot0517calCs_1.jpg"/>
+   * cobalto `plot0517calCo_1.dat` ( 79 secondi) 
+  <img src="plot_jpegs/plot0517calCo_1.jpg"/>
+
+ ## 18 maggio
+  
+ ### In laboratorio:
+ 
+ * Calibrazioni (9:35):
+   * sodio `plot0518calNa_0.dat` ( 189 secondi)
+   * cesio `plot0518calCs_0.dat` ( 36 secondi)
+   * cobalto `plot0518calCo_0.dat` ( 67 secondi) 
+ 
+ * Punto di lavoro (9:38):
+ | V<sub>mon1</sub> [V] | coarse gain PMT1a | fine gain PMT1a | attenuazione [dB] PMT1a | V<sub>mon2</sub> [V] | V_th1b    | V_th2     |
+ | -------------------- | ----------------- | --------------- | ----------------------- | -------------------- | --------- | --------- |
+ | 694                  | 10                | 0.700           | 5.5                     | 1795                 | -302.3 mV | -152.1 mV |
+
+ * Acquisizione a 30 gradi con carrello su ultima tacchetta (22 cm): `plot0518th15d22T150.dat` (3395 s)
+  
+ * Calibrazioni (10:47):
+   * sodio `plot0518calNa_1.dat` ( 184 secondi)
+   * cesio `plot0518calCs_1.dat` ( 36 secondi)
+   * cobalto `plot0518calCo_1.dat` ( 77 secondi) 
+ 
+ * Acquisizione a 30 gradi con carrello su ultima tacchetta (22 cm): `plot0518th15d22T150_1.dat` ( 2152 s)
+ 
+ * Calibrazione (11:35):
+   * sodio `plot0518calNa_2.dat` ( 186 secondi)
+   * cesio `plot0518calCs_2.dat` ( 307 secondi)
+ <img src="plot_jpegs/plot0518Cs_2"/>
+ Usiamo questo spettro per studiare la forma della spalla compton in modo da avere una conoscenza migliore del fondo per le stime delle energie dei fotoni dopo lo scattering (e diminuire così l'incertezza sistematica proveniente dal foondo).
+   * cobalto `plot0518calCo_2.dat` ( 65 secondi) 
+ 
+ * Acquisizione a 30 gradi con carrello su ultima tacchetta (22 cm): `plot0518th15d22T150_2.dat` ( 3306 s)
+ 
+ * Calibrazioni (12:40):
+   * sodio `plot0518calNa_3.dat` ( 185 secondi)
+   * cesio `plot0518calCs_3.dat` ( 31 secondi)
+   * cobalto `plot0518calCo_3.dat` ( 62 secondi) 
+ 
+## 19 maggio
+ ### In laboratorio (10:00)
+ 
+ * Acquisizione a 15 gradi e distanza 23 cm dall'inizio della guida: `plot0519th15d22T150.dat` (27928 s)
+ 
+ * Punto di lavoro
+ | V<sub>mon1</sub> [V] | coarse gain PMT1a | fine gain PMT1a | attenuazione [dB] PMT1a | V<sub>mon2</sub> [V] | V_th1b    | V_th2     |
+ | -------------------- | ----------------- | --------------- | ----------------------- | -------------------- | --------- | --------- |
+ | 692                  | 10                | 0.700           | 5.5                     | 1789                 | -302.0 mV | -152.0 mV |
+ 
+ ### In laboratorio (16:30)
+ 
+ Fermiamo l'acquisizione iniziata la mattina
+ 
+ * Punto di lavoro (17:35)
+ | V<sub>mon1</sub> [V] | coarse gain PMT1a | fine gain PMT1a | attenuazione [dB] PMT1a | V<sub>mon2</sub> [V] | V_th1b    | V_th2     |
+ | -------------------- | ----------------- | --------------- | ----------------------- | -------------------- | --------- | --------- |
+ | 692                  | 10                | 0.700           | 5.5                     | 1793                 | -303.3 mV | -153.4 mV |
+ 
+ * Calibrazioni (17:40)
+   * sodio `plot0519calNa_0.dat` ( 619 secondi)
+   * cesio `plot0519calCs_0.dat` ( 27 secondi)
+   * cobalto `plot0519calCo_0.dat` ( 409 secondi) 
+ 
+ * Acquisizione 18 gradi, distanza 22 cm dall'inizio della guida: `plot0519th18d22T150.dat` ( 2329 secondi)
+ 
+ * Calibrazioni (17:40)
+   * sodio `plot0519calNa_1.dat` ( 138 secondi)
+   * cesio `plot0519calCs_1.dat` ( 34 secondi)
+   * cobalto `plot0519calCo_1.dat` ( 74 secondi) 
+ 
+## 24 maggio
+ 
+ ### In laboratorio (9:15)
+ 
+ * Acquisizione 26 gradi, tacchetta 22: `plot0524th26d22T150.dat` ( 25451 secondi)
+ 
+ * Punto di lavoro (9:15)
+  | V<sub>mon1</sub> [V] | coarse gain PMT1a | fine gain PMT1a | attenuazione [dB] PMT1a | V<sub>mon2</sub> [V] | V_th1b    | V_th2     |
+  | -------------------- | ----------------- | --------------- | ----------------------- | -------------------- | --------- | --------- |
+  | 693                  | 10                | 0.700           | 5.5                     | 1790                 | -302.4 mV | -152.2 mV |
+ 
+ ### In laboratorio (15:44)
+ 
+  * Punto di lavoro (15:44)
+    | V<sub>mon1</sub> [V] | coarse gain PMT1a | fine gain PMT1a | attenuazione [dB] PMT1a | V<sub>mon2</sub> [V] | V_th1b    | V_th2     |
+    | -------------------- | ----------------- | --------------- | ----------------------- | -------------------- | --------- | --------- |
+    | 692                  | 10                | 0.700           | 5.5                     | 1792                 | -303.3 mV | -152.3 mV |
+
+ * Calibrazioni (16:20)
+   * sodio `plot0524calNa_0.dat` ( 229 secondi)
+   * cesio `plot0524calCs_0.dat` ( 43 secondi)
+   * cobalto `plot0524calCo_0.dat` ( 67 secondi)
+
+ * Acquisizione a 22 gradi, tacchetta 22: `plot0524th22d22T150.dat` ( secondi)
+ 
+ * Calibrazione (18:40)
+   * sodio `plot0524calNa_1.dat` (  secondi)
+   * cesio `plot0524calCs_1.dat` (  secondi)
+   * cobalto `plot0524calCo_1.dat` (  secondi)
