@@ -401,3 +401,6 @@ Compariamo i risultati del fit quadratico, ottenuto con un fit locale con una cu
  Gli errori percentuali sono (per i due picchi):
 * energia della particella scatterata  10.3%, 6.9% 
 * errore dell'angolo  4.9%, 4.4%
+
+<img src="plot_jpegs/fitcal12_0.jpg"/>
+<img src="plot_jpegs/fitcal12_1.jpg"/>
