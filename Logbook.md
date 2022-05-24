@@ -505,4 +505,25 @@ Compariamo i risultati del fit quadratico, ottenuto con un fit locale con una cu
    * cesio `plot0519calCs_1.dat` ( 34 secondi)
    * cobalto `plot0519calCo_1.dat` ( 74 secondi) 
  
+## 24 maggio
+ 
+ ### In laboratorio (9:15)
+ 
+ * Acquisizione 26 gradi, tacchetta 22: `plot0524th26d22T150.dat` (  secondi)
+ 
+ * Punto di lavoro (9:15)
+  | V<sub>mon1</sub> [V] | coarse gain PMT1a | fine gain PMT1a | attenuazione [dB] PMT1a | V<sub>mon2</sub> [V] | V_th1b    | V_th2     |
+  | -------------------- | ----------------- | --------------- | ----------------------- | -------------------- | --------- | --------- |
+  | 693                  | 10                | 0.700           | 5.5                     | 1790                 | -302.4 mV | -152.2 mV |
+ 
+ ### In laboratorio (15:30)
+ 
+  * Punto di lavoro (9:15)
+    | V<sub>mon1</sub> [V] | coarse gain PMT1a | fine gain PMT1a | attenuazione [dB] PMT1a | V<sub>mon2</sub> [V] | V_th1b    | V_th2     |
+    | -------------------- | ----------------- | --------------- | ----------------------- | -------------------- | --------- | --------- |
+    | 693                  | 10                | 0.700           | 5.5                     | 1790                 | -302.4 mV | -152.2 mV |
 
+ * Calibrazioni (15: )
+   * sodio `plot0524calNa_0.dat` (  secondi)
+   * cesio `plot0524calCs_0.dat` (  secondi)
+   * cobalto `plot0524calCo_0.dat` (  secondi)
