@@ -449,14 +449,14 @@ Compariamo i risultati del fit quadratico, ottenuto con un fit locale con una cu
  | -------------------- | ----------------- | --------------- | ----------------------- | -------------------- | --------- | --------- |
  | 694                  | 10                | 0.700           | 5.5                     | 1795                 | -302.3 mV | -152.1 mV |
 
- * Acquisizione a 30 gradi con carrello su ultima tacchetta (22 cm): `plot0518th15d22T150.dat` (3395 s)
+ * Acquisizione a 15 gradi con carrello su ultima tacchetta (22 cm): `plot0518th15d22T150.dat` (3395 s)
   
  * Calibrazioni (10:47):
    * sodio `plot0518calNa_1.dat` ( 184 secondi)
    * cesio `plot0518calCs_1.dat` ( 36 secondi)
    * cobalto `plot0518calCo_1.dat` ( 77 secondi) 
  
- * Acquisizione a 30 gradi con carrello su ultima tacchetta (22 cm): `plot0518th15d22T150_1.dat` ( 2152 s)
+ * Acquisizione a 15 gradi con carrello su ultima tacchetta (22 cm): `plot0518th15d22T150_1.dat` ( 2152 s)
  
  * Calibrazione (11:35):
    * sodio `plot0518calNa_2.dat` ( 186 secondi)
@@ -465,7 +465,7 @@ Compariamo i risultati del fit quadratico, ottenuto con un fit locale con una cu
  Usiamo questo spettro per studiare la forma della spalla compton in modo da avere una conoscenza migliore del fondo per le stime delle energie dei fotoni dopo lo scattering (e diminuire così l'incertezza sistematica proveniente dal foondo).
    * cobalto `plot0518calCo_2.dat` ( 65 secondi) 
  
- * Acquisizione a 30 gradi con carrello su ultima tacchetta (22 cm): `plot0518th15d22T150_2.dat` ( 3306 s)
+ * Acquisizione a 15 gradi con carrello su ultima tacchetta (22 cm): `plot0518th15d22T150_2.dat` ( 3306 s)
  
  * Calibrazioni (12:40):
    * sodio `plot0518calNa_3.dat` ( 185 secondi)
@@ -532,3 +532,27 @@ Compariamo i risultati del fit quadratico, ottenuto con un fit locale con una cu
    * sodio `plot0524calNa_1.dat` ( 52 secondi)
    * cesio `plot0524calCs_1.dat` ( 19 secondi)
    * cobalto `plot0524calCo_1.dat` ( 30 secondi)
+
+ ## 25 maggio
+ 
+ * Punto di lavoro (15:44)
+    | V<sub>mon1</sub> [V] | coarse gain PMT1a | fine gain PMT1a | attenuazione [dB] PMT1a | V<sub>mon2</sub> [V] | V_th1b    | V_th2     |
+    | -------------------- | ----------------- | --------------- | ----------------------- | -------------------- | --------- | --------- |
+    | 692                  | 10                | 0.700           | 5.5                     | 1790                 | -303 mV | -152 mV |
+ 
+ Facciamo acquisizioni di cui teniamo solo il numero di entrate e il tempo per capire come cambia la frequenza del fascio al variare dell'angolo. D = 22
+ 
+    | $\theta$ | entries | time | freq [Hz] | NOTE             |
+    |----------|---------|------|-----------|------------------|
+    | 15       | 27024   | 94.9 | 284       |                  |
+    | 12       | 32125   | 104.4| 307       |                  |
+    | 9        | 32673   | 86.4 | 378       |                  |
+    | 6        | 97916   | 107.8| 908       | picchi visibili  |
+    | 3        | 307351  | 74.6 | 4.12k     | picchi spostati  |
+    | 0        | 405191  | 51.9 | 7.81k     | picchi spostati  |
+    | -1       | 408813  | 47.8 | 8.55k     | picchi spostati  |
+    | -2       | 334416  | 41.5 | 8.05k     | picchi spostati  |
+    | -3       | 549336  | 75.7 | 7.65k     | picchi spostati  | 
+    | -5       | 220753  | 50.5 | 4.37k     | picchi spostati  |
+ 
+ 
