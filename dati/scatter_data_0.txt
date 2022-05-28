@@ -1,0 +1,10 @@
+# RISULTATI FIT SU PICCO A MINORE ENERGIA
+# E'    dE'     theta
+# 12th of may
+5273    23      22
+# 17th of may
+4743    8       30
+# 19th of may
+5501    15      15
+# 26th of may
+5240    13      18

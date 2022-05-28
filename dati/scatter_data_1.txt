@@ -1,0 +1,10 @@
+# RISULTATI FIT SU PICCO A MAGGIORE ENERGIA
+# E'    dE'     theta
+# 12th of may
+5863    23      22
+# 17th of may
+5200    8       30
+# 19th of may
+6163    15      15
+# 26th of may
+5841    15      18
