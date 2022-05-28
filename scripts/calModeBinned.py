@@ -30,7 +30,7 @@ def BSfunc(arr, min, max):
 
 if __name__ == '__main__':
     
-    fname = '../dati/plot0512calCo_1.dat'
+    fname = '../dati/plot0526calCo_0.dat'
     print(fname[8:])
     arr = np.array([int(hexa, base=16) for hexa in np.genfromtxt(fname, dtype='str')])
     
