@@ -12,6 +12,7 @@
 #include "TPaveText.h"
 #include "TAxis.h"
 #include "TStyle.h"
+#include "TMatrixD.h"
 
 TLegend * drawLegend(TGraph * leg_plot1, TGraph * leg_plot2, TGraph * leg_plot3,TF1 * leg_func_linear){
     TLegend * legend = new TLegend(0.15, 0.7, 0.35, 0.87, "", "NDC nb");
@@ -56,11 +57,11 @@ Double_t ffunc(Double_t * x, Double_t * p){
 }
 
 void getSources(Double_t * vNa, Double_t * vCs, Double_t * vCo, Double_t * eNa, Double_t * eCs, Double_t * eCo){
-    std::string name = "calStop.txt";
+    std::string name = "calStart.txt";
     std::ifstream fin("../dati/" + name);
     std::string line, lline;
     int i = 0;
-    Double_t v[5][11]; // v[# rows][# columns] in file
+    Double_t v[10][11]; // v[# rows][# columns] in file, number of rows must be checked before launching the script
     while(std::getline(fin, line)){
         lline = line[0];
         if (lline != "#"){
@@ -76,7 +77,7 @@ void getSources(Double_t * vNa, Double_t * vCs, Double_t * vCo, Double_t * eNa, 
         }
     }
     i = 0;
-    Double_t date = 220512; // Select which calibration you want, format = yymmdd
+    Double_t date = 220517; // Select which calibration you want, format = yymmdd
     while (v[i][0] != date){
         i++;
     }
@@ -104,10 +105,9 @@ void calLin(){
     Double_t eV_err[2] = {0, 0};
     getSources(binNa_val, binCs_val, binCo_val, binNa_err, binCs_err, binCo_err);
 
-
     TCanvas * c1 = new TCanvas("c1", "c1", 1);
     TF1 * func = new TF1("func", ffunc, 0, 8000, 3); 
-    func->SetParNames("a", "b", "c");
+    func->SetParNames("a", "m", "q");
     func->FixParameter(0, 0);
     TGraphErrors * plotNa = new TGraphErrors(2, eVNa_val, binNa_val, eV_err, binNa_err);
     TGraphErrors * plotCs = new TGraphErrors(1, eVCs_val, binCs_val, eV_err, binCs_err);
@@ -119,6 +119,7 @@ void calLin(){
     plot->Draw("AP");
     TFitResultPtr r = plot->Fit("func", "CS");
     r->Print();
+    TMatrixD cov = r->GetCovarianceMatrix(); cov.Print();
     TLegend * legend = drawLegend(plotNa, plotCs, plotCo,func);
     TPaveText * infos = drawInfos();
     fancyPlot(plot, plotNa, plotCs, plotCo);
