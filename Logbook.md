@@ -532,3 +532,18 @@ Compariamo i risultati del fit quadratico, ottenuto con un fit locale con una cu
    * sodio `plot0524calNa_1.dat` (  secondi)
    * cesio `plot0524calCs_1.dat` (  secondi)
    * cobalto `plot0524calCo_1.dat` (  secondi)
+
+## 26 maggio 
+
+  * Punto di lavoro (15:44)
+    | V<sub>mon1</sub> [V] | coarse gain PMT1a | fine gain PMT1a | attenuazione [dB] PMT1a | V<sub>mon2</sub> [V] | V_th1b    | V_th2     |
+    | -------------------- | ----------------- | --------------- | ----------------------- | -------------------- | --------- | --------- |
+    | 692                  | 10                | 0.700           | 5.5                     | 1792                 | -303.3 mV | -152.3 mV |
+
+   * Acquisizione a 18 gradi: `plot0526th18d22T150.dat`, di durata 30959 secondi
+   * Ho fatto le solite calibrazioni con le seguenti durate
+     * Na: 52 secondi
+     * Cs: 18 secondi
+     * Co: 43 secondi
+  
+  Il foro del sarcofago ha un diametro di 0.9 +/- 0.1 cm. 
