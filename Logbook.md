@@ -28,9 +28,9 @@ Andiamo a vedere che energie legge il PMT1a in diverse configurazioni: cambiando
 Prendiamo il segnale PMT1a, lo inviamo all'attenuatore passivo con una attenuazione di 20 dB, il segnale attenuato passa dal TENNELEC che aggiusta la forma d'onda in modo tale che sia compatibile con il modulo ADC CAEN, che misura l'energia dell'evento.
 L'attenuatore serve perchè il segnale satura nel TENNELEC per tensioni superiori a 4.84 V (cursori)
 
-| V<sub>mon1</sub> [V] | V<sub>THR</sub> [mV] | D [cm] | name_file     |
-| -------------------- | -------------------- | ------ | ------------- |
-| 670                  | -68.3                |        |               |
+| V<sub>mon1</sub> [V] | V<sub>THR</sub> [mV] | D [cm] | name_file |
+| -------------------- | -------------------- | ------ | --------- |
+| 670                  | -68.3                |        |           |
 
 ### lista di domande
 * le ripartenze sono un problema?
@@ -536,24 +536,24 @@ Compariamo i risultati del fit quadratico, ottenuto con un fit locale con una cu
  ## 25 maggio
  
  * Punto di lavoro (15:44)
-    | V<sub>mon1</sub> [V] | coarse gain PMT1a | fine gain PMT1a | attenuazione [dB] PMT1a | V<sub>mon2</sub> [V] | V_th1b    | V_th2     |
-    | -------------------- | ----------------- | --------------- | ----------------------- | -------------------- | --------- | --------- |
+    | V<sub>mon1</sub> [V] | coarse gain PMT1a | fine gain PMT1a | attenuazione [dB] PMT1a | V<sub>mon2</sub> [V] | V_th1b  | V_th2   |
+    | -------------------- | ----------------- | --------------- | ----------------------- | -------------------- | ------- | ------- |
     | 692                  | 10                | 0.700           | 5.5                     | 1790                 | -303 mV | -152 mV |
  
  Facciamo acquisizioni di cui teniamo solo il numero di entrate e il tempo per capire come cambia la frequenza del fascio al variare dell'angolo. D = 22
- 
-    | $\theta$ | entries | time | freq [Hz] | NOTE             |
-    |----------|---------|------|-----------|------------------|
-    | 15       | 27024   | 94.9 | 284       |                  |
-    | 12       | 32125   | 104.4| 307       |                  |
-    | 9        | 32673   | 86.4 | 378       |                  |
-    | 6        | 97916   | 107.8| 908       | picchi visibili  |
-    | 3        | 307351  | 74.6 | 4.12k     | picchi spostati  |
-    | 0        | 405191  | 51.9 | 7.81k     | picchi spostati  |
-    | -1       | 408813  | 47.8 | 8.55k     | picchi spostati  |
-    | -2       | 334416  | 41.5 | 8.05k     | picchi spostati  |
-    | -3       | 549336  | 75.7 | 7.65k     | picchi spostati  | 
-    | -5       | 220753  | 50.5 | 4.37k     | picchi spostati  |
+
+  | $\theta$ | entries | time  | freq [Hz] | NOTE            |
+  | -------- | ------- | ----- | --------- | --------------- |
+  | 15       | 27024   | 94.9  | 284       |                 |
+  | 12       | 32125   | 104.4 | 307       |                 |
+  | 9        | 32673   | 86.4  | 378       |                 |
+  | 6        | 97916   | 107.8 | 908       | picchi visibili |
+  | 3        | 307351  | 74.6  | 4.12k     | picchi spostati |
+  | 0        | 405191  | 51.9  | 7.81k     | picchi spostati |
+  | -1       | 408813  | 47.8  | 8.55k     | picchi spostati |
+  | -2       | 334416  | 41.5  | 8.05k     | picchi spostati |
+  | -3       | 549336  | 75.7  | 7.65k     | picchi spostati |
+  | -5       | 220753  | 50.5  | 4.37k     | picchi spostati |
  
  ## 26 maggio 
 
