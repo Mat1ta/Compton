@@ -19,12 +19,12 @@ def sist(db, m):
     return np.sqrt(db**2 / m**2)
 
 if __name__ == '__main__':
-    b = 4743
-    db = 8
-    b_sist = 81
-    m = 4887
-    dm = 37
-    q = 195
-    dq = 37
-    c = -1305
+    b = 5506
+    db = 20
+    b_sist = 74
+    m = 4983
+    dm = 47
+    q = 182
+    dq = 41
+    c = -1776
     print(f'{central(b, m, q):.4f} +/- {stat(b, db, m, dm, q, dq, c):.4f} stat +/- {sist(b_sist, m):.4f} sist')

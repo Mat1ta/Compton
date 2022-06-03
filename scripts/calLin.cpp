@@ -29,19 +29,19 @@ TLegend * drawLegend(TGraph * leg_plot1, TGraph * leg_plot2, TGraph * leg_plot3,
 }
 
 TPaveText * drawInfos(){
-    TPaveText * infos = new TPaveText(0.55, 0.8, 0.35, 0.85, "NDC nb");
+    TPaveText * infos = new TPaveText(0.25, 0.6, 0.35, 0.70, "NDC nb");
     infos->SetTextFont(42);
     infos->SetTextSizePixels(22);
+    infos->SetTextAlign(11);
     infos->SetFillColorAlpha(0,0.0);
-    infos->AddText("Final calibration: 12th of may 2022");
-    infos->AddText("Plot 17/05/22");
+    infos->AddText("Calibration 12th of may 2022");
     infos->Draw();
     return infos; 
 }
 
 void fancyPlot(TMultiGraph * plt, TGraphErrors * plt1, TGraphErrors * plt2, TGraphErrors * plt3){
     plt->GetXaxis()->SetTitle("E [MeV]"); plt->GetXaxis()->SetTitleSize(0.045);
-    plt->GetYaxis()->SetTitle("bin [u.a.]"); plt->GetYaxis()->SetTitleSize(0.045);
+    plt->GetYaxis()->SetTitle("bin [a.u.]"); plt->GetYaxis()->SetTitleSize(0.045);
     plt->GetYaxis()->SetTitleOffset(1.05);
     plt1->SetMarkerStyle(20);
     plt1->SetMarkerColor(3);
@@ -61,7 +61,7 @@ void getSources(Double_t * vNa, Double_t * vCs, Double_t * vCo, Double_t * eNa, 
     std::ifstream fin("../dati/" + name);
     std::string line, lline;
     int i = 0;
-    Double_t v[10][11]; // v[# rows][# columns] in file, number of rows must be checked before launching the script
+    Double_t v[11][11]; // v[# rows][# columns] in file, number of rows must be checked before launching the script
     while(std::getline(fin, line)){
         lline = line[0];
         if (lline != "#"){
@@ -77,7 +77,7 @@ void getSources(Double_t * vNa, Double_t * vCs, Double_t * vCo, Double_t * eNa, 
         }
     }
     i = 0;
-    Double_t date = 220517; // Select which calibration you want, format = yymmdd
+    Double_t date = 220519; // Select which calibration you want, format = yymmdd
     while (v[i][0] != date){
         i++;
     }

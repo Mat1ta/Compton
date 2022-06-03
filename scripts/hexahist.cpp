@@ -22,7 +22,7 @@
 void fancyPlot(TH1F * hist){
     hist->GetXaxis()->SetTitle("E [a.u.]");
     hist->GetXaxis()->SetTitleSize(0.045);
-    hist->GetYaxis()->SetTitle("occurencies [a.u.]");
+    hist->GetYaxis()->SetTitle("occurencies");
     hist->GetYaxis()->SetTitleSize(0.045);
     hist->GetYaxis()->SetTitleOffset(1.05);
 }
@@ -36,10 +36,9 @@ TPaveText * drawInfos(){
     infos->SetFillColorAlpha(0,0.0);
     infos->SetTextAlign(11);
     // infos->AddText("D = 1 cm");
-    // infos->AddText("T = 300 ns");
-    infos->AddText("Cobalt source in date 10/05/22");
-    infos->AddText("Direct beam");
-    infos->AddText("Lenght = 30 s");
+    infos->AddText("05/05/22");
+    infos->AddText("T = 150 ns");
+    infos->AddText("Lenght = 1020 s");
     infos->Draw();
     return infos;
 }
@@ -49,7 +48,7 @@ void hexahist(std::string fname){
     std::string element;
 
     TCanvas * c1 = new TCanvas("c1", "c1", 1);
-    TH1F * h1 = new TH1F("h1", "", 500, 0, 8000);
+    TH1F * h1 = new TH1F("h1", "", 1000, 0, 8000);
 
     while (fin >> element){
         unsigned int value = std::stoul(element, nullptr, 16);

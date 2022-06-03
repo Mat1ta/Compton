@@ -9,15 +9,16 @@ from ROOT import TCanvas, TH1F
         Co_high : 6400 < E < 7500
 '''
 
-DRAW = int(2e3) # Number of draws in the sample
-REP = int(3e3) # Number of repetitions
-BIN = 100 # Bins in temp histogram
+DRAW = int(1e4) # Number of draws in the sample
+REP = int(500) # Number of repetitions
+BIN = 1000 # Bins in temp histogram
 
 def BSfunc(arr, min, max):
     mask1 = arr > min
     mask2 = arr < max
-    arr = arr[mask1 & mask2]
 
+    arr = arr[mask1 & mask2]
+    DRAW = len(arr)
     mode = np.zeros(REP)
 
     for i in range(REP):
@@ -30,10 +31,10 @@ def BSfunc(arr, min, max):
 
 if __name__ == '__main__':
     
-    fname = '../dati/plot0526calCo_0.dat'
+    fname = '../dati/plot0519calCs_0.dat'
     print(fname[8:])
     arr = np.array([int(hexa, base=16) for hexa in np.genfromtxt(fname, dtype='str')])
-    
+
     if fname[19:21] == 'Na':
         BSfunc(arr, 2000, 4000)
         BSfunc(arr, 5800, 7400)

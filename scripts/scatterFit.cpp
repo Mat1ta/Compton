@@ -26,13 +26,13 @@ TLegend * drawLegend(TGraph * leg_plot1,TF1 * leg_func){
 }
 
 TPaveText * drawInfos(){
-    TPaveText * infos = new TPaveText(0.60, 0.75, 0.85, 0.85, "NDC nb");
+    TPaveText * infos = new TPaveText(0.55, 0.75, 0.85, 0.85, "NDC nb");
     infos->SetTextAlign(11);
     infos->SetTextFont(42);
     infos->SetTextSizePixels(22);
     infos->SetFillColorAlpha(0,0.0);
-    infos->AddText("E_{in} = 1.1732 MeV");
-    infos->AddText("#theta_{offset} = -1.30 #pm 1.12#circ");
+    infos->AddText("E_{in} = 1.3325 MeV");
+    infos->AddText("#theta_{offset} = -1.034 #pm 0.083#circ");
     infos->Draw();
     return infos; 
 }
@@ -58,25 +58,27 @@ void scatterFit(){
     gStyle->SetStatX(.5); gStyle->SetStatY(.35); gStyle->SetFillColorAlpha(0,0.);
 
     // DATA
-    Double_t E_low[] = {1.0894, 1.0694, 1.0166, 0.9092};
-    Double_t dE_low[] = {0.0051, 0.0043, 0.0054, 0.0027};
-    Double_t dE_lows[] = {0.0173, 0.0195, 0.0165, 0.0172};
-    Double_t E_high[] = {1.2249, 1.1965, 1.1343, 1.0006};
-    Double_t dE_high[] = {0.0057, 0.0051, 0.0057, 0.0028};
-    Double_t dE_highs[] = {0.0176, 0.0197, 0.0166, 0.0172};
-    Double_t th[] = {15, 18, 22, 30};
-    Double_t dth[] = {0.29, 0.29, 0.29, 0.29};
-    Double_t dth_sist[] = {1.16, 1.16, 1.16, 1.16};
-    Double_t E_peaklow = 1.1732, E_peakhigh = 1.3325;
+    Double_t E_low[] = {1.0894, 1.0694, 1.0166, 0.9607, 0.9092};
+    Double_t dE_low[] = {0.0051, 0.0043, 0.0054, 0.0054, 0.0027};
+    Double_t dE_lows[] = {0.0173, 0.0195, 0.0165, 0.0149, 0.0172};
+    Double_t E_high[] = {1.2249, 1.1965, 1.1343, 1.0684, 1.0006};
+    Double_t dE_high[] = {0.0057, 0.0051, 0.0057, 0.0059, 0.0028};
+    Double_t dE_highs[] = {0.0176, 0.0197, 0.0166, 0.0149, 0.0172};
+    Double_t th[] = {15, 18, 22, 26, 30};
+    Double_t dth[] = {0.29, 0.29, 0.29, 0.29, 0.29};
+    Double_t dth_sist[] = {1.16, 1.16, 1.16, 1.16, 1.16};
+    Double_t E_peaklow = 1.173240, E_peakhigh = 1.332508;
 
     // TGRAPH AND FUNCTION
     TCanvas * c1 = new TCanvas("c1", "c1", 1);
-    TGraphErrors * plot = new TGraphErrors(4, th, E_low, dth_sist, dE_lows);
+    TGraphErrors * plot = new TGraphErrors(5,th, E_high, dth, dE_high);
+    plot->SetTitle("");
     TF1 * func = new TF1("compton", compton, 0, 45, 4); 
     func->SetParNames("E_{peak}", "m_{e}", "#theta_{0}", "k");
-    func->FixParameter(0, E_peaklow);
-    func->FixParameter(2, -1.30); // theta_0
-    func->FixParameter(3, 0); // k
+    func->FixParameter(0, E_peakhigh);
+    func->SetParameter(1, 0.511); // m_e
+    func->FixParameter(2, -1.034); // theta_0
+    func->FixParameter(3, 0);     // k
 
     // FIT AND FANCY
     plot->Draw("AP");

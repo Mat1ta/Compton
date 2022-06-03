@@ -15,7 +15,7 @@ plt.errorbar(theta, f, df, dt,   fmt='.b', label='data')
 def gaus(x, u, s, A):
 	return A*np.exp(-(x-u)**2/s**2)
 
-par=[-1, 4, 8500]
+par=[-1, 3, 9000]
 xx=np.linspace(-5, 15, 1000)
 
 popt, pcov = curve_fit(gaus, theta, f, sigma=df)

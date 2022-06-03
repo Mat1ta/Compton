@@ -19,9 +19,9 @@ TPaveText * drawInfos(){
     infos->SetTextSizePixels(22);
     infos->SetFillColorAlpha(0,0.0);
     infos->SetTextAlign(11);
-    infos->AddText("26th of may");
-    infos->AddText("#theta = 18#circ");
-    infos->AddText("Lenght =  30959 s");
+    infos->AddText("24th of may");
+    infos->AddText("#theta = 26#circ");
+    infos->AddText("Lenght =  25451 s");
     infos->Draw();
     return infos;
 }
@@ -81,10 +81,10 @@ void fit_2gaus(std::string fname){
     std::ifstream fin("../dati/" + fname);
     std::string element;
     Double_t par[13];
-    Double_t min = 3750, max = 6700;
+    Double_t min = 3700, max = 6400;
 
     TCanvas * c1 = new TCanvas("c1", "c1", 1);
-    TH1F * h1 = new TH1F("h1", "h1", 120, 3200, 9500);
+    TH1F * h1 = new TH1F("h1", "h1", 120, 3000, 9500);
 
     while (fin >> element){
         unsigned int value = std::stoul(element, nullptr, 16);
@@ -95,23 +95,23 @@ void fit_2gaus(std::string fname){
     TF1 * gaus2 = new TF1("gaus2", gaus, min, max, 3); gaus2->SetLineColor(3);
     TF1 * fSDA = new TF1("SDA", SDAfunc, min, max, 7); fSDA->SetLineColor(6);
 
-    Double_t par0[] = {300, 5300, 100, 200, 5800, 100, 2e-5, -2e-4, 1e-3, 4000, 500, -0.01, 1};
+    Double_t par0[] = {300, 5000, 100, 100, 5500, 100, 2e-5, -2e-4, 1e-3, 3700, 500, -0.01, 1};
     func->SetParName(0, "A_{0}"); func->SetParName(1, "#mu_{0}"); func->SetParName(2, "#sigma_{0}");
     func->SetParName(3, "A_{1}"); func->SetParName(4, "#mu_{1}"); func->SetParName(5, "#sigma_{1}");
     func->SetParName(6, "a"); func->SetParName(7, "b"); func->SetParName(8, "c");
     func->SetParName(9, "E_{C}"); func->SetParName(10, "#sigma_{C}");
     func->SetParName(11, "m"); func->SetParName(12, "q");
     func->SetParameters(par0);
-    func->SetParLimits(0, 128, 400);   // A_0
-    func->SetParLimits(1, 5200, 5400); // mu_0
+    func->SetParLimits(0, 150, 400);   // A_0
+    func->SetParLimits(1, 4800, 5200); // mu_0
     func->SetParLimits(2, 0, 300);     // sigma_0
-    func->SetParLimits(3, 0, 260);   // A_1
-    func->SetParLimits(4, 5700, 5950); // mu_1
+    func->SetParLimits(3, 0, 150);   // A_1
+    func->SetParLimits(4, 5300, 5700); // mu_1
     func->SetParLimits(5, 0, 300);     // sigma_1
     func->SetParLimits(6, 0, 1e-4);       // a
     // func->SetParLimits(7, -1, 0);       // b
     // func->SetParLimits(8, 0, 1);       // c
-    func->SetParLimits(9, 3900, 4300); // E_c
+    func->SetParLimits(9, 3500, 3900); // E_c
     func->SetParLimits(10, 0, 600);// sigma_c
     func->SetParLimits(11, -1, 0);     // m
     func->SetParLimits(12, -10, 10);   // q
